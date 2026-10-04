@@ -1,0 +1,16 @@
+# conda env create -f environment.yml && conda activate rnagfn
+#
+# On Bridges-2, install the CUDA build of torch afterwards so it matches the
+# node driver (the conda-forge build is CPU-only):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+name: rnagfn
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.11
+  - viennarna>=2.6
+  - numpy>=1.24
+  - pandas>=2.0
+  - matplotlib>=3.7
+  - seaborn>=0.13
+  - tqdm>=4.66
+  - pip

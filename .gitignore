@@ -1,0 +1,7 @@
+results/
+figures/
+logs/
+data/
+__pycache__/
+*.pyc
+*.pt
