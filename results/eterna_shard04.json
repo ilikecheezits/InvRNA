@@ -1,0 +1,68 @@
+{
+ "experiment": "eterna",
+ "meta": {
+  "timestamp": "2026-10-04T17:41:20",
+  "host": "r265.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47416598",
+  "slurm_task": "4",
+  "cpus": "32",
+  "args": {
+   "command": "eterna",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "seconds": 120.0,
+   "max_puzzle_length": 100,
+   "shard": 4,
+   "n_shards": 10
+  },
+  "git": "ac06f07",
+  "viennarna": "2.7.2"
+ },
+ "seconds": 120.0,
+ "rows": [
+  {
+   "puzzle": 11,
+   "name": "InfoRNA test 16",
+   "length": 36,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 38272,
+   "solved_here": true
+  },
+  {
+   "puzzle": 30,
+   "name": "Corner bulge training",
+   "length": 31,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 172141,
+   "solved_here": true
+  },
+  {
+   "puzzle": 52,
+   "name": "[RNA] Repetitious Sequences 8/10",
+   "length": 80,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 72,
+   "name": "Loop next to a Multiloop",
+   "length": 73,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": true,
+   "n_distinct": 11,
+   "solved_here": true
+  }
+ ]
+}

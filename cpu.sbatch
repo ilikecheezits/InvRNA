@@ -23,9 +23,14 @@ umask 027
 cd "${RNAGFN_ROOT:-${SLURM_SUBMIT_DIR:-$PWD}}"
 mkdir -p logs results figures
 
-PY="${RNAGFN_PY:-python}"
-$PY -c "import rnagfn" 2>/dev/null || {
-  echo "[!!] cannot import rnagfn from $PWD -- is the conda env active?" >&2
+# Use the rnagfn env's interpreter directly so jobs do not depend on which
+# conda env (if any) the submitting shell had active.
+ENVPY="${RNAGFN_ENV:-$HOME/.conda/envs/rnagfn}/bin/python"
+if [[ -n "${RNAGFN_PY:-}" ]]; then PY="$RNAGFN_PY"
+elif [[ -x "$ENVPY" ]]; then PY="$ENVPY"
+else PY=python; fi
+$PY -c "import rnagfn, RNA" 2>/dev/null || {
+  echo "[!!] $PY cannot import rnagfn + ViennaRNA from $PWD -- is the conda env active?" >&2
   exit 1
 }
 

@@ -1,0 +1,68 @@
+{
+ "experiment": "eterna",
+ "meta": {
+  "timestamp": "2026-10-04T17:41:21",
+  "host": "r318.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47416582",
+  "slurm_task": "9",
+  "cpus": "32",
+  "args": {
+   "command": "eterna",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "seconds": 120.0,
+   "max_puzzle_length": 100,
+   "shard": 9,
+   "n_shards": 10
+  },
+  "git": "ac06f07",
+  "viennarna": "2.7.2"
+ },
+ "seconds": 120.0,
+ "rows": [
+  {
+   "puzzle": 20,
+   "name": "InfoRNA bulge test 9",
+   "length": 42,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 7868,
+   "solved_here": true
+  },
+  {
+   "puzzle": 43,
+   "name": "Recoil",
+   "length": 85,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 78,
+   "solved_here": true
+  },
+  {
+   "puzzle": 62,
+   "name": "Bug 18",
+   "length": 53,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 199,
+   "solved_here": true
+  },
+  {
+   "puzzle": 92,
+   "name": "Mutated chicken feet",
+   "length": 100,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
+  }
+ ]
+}

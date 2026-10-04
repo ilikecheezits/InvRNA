@@ -1,0 +1,68 @@
+{
+ "experiment": "eterna",
+ "meta": {
+  "timestamp": "2026-10-04T17:41:22",
+  "host": "r289.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47416599",
+  "slurm_task": "5",
+  "cpus": "32",
+  "args": {
+   "command": "eterna",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "seconds": 120.0,
+   "max_puzzle_length": 100,
+   "shard": 5,
+   "n_shards": 10
+  },
+  "git": "ac06f07",
+  "viennarna": "2.7.2"
+ },
+ "seconds": 120.0,
+ "rows": [
+  {
+   "puzzle": 13,
+   "name": "square",
+   "length": 67,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 8629,
+   "solved_here": true
+  },
+  {
+   "puzzle": 33,
+   "name": "Worm 1",
+   "length": 45,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 573,
+   "solved_here": true
+  },
+  {
+   "puzzle": 54,
+   "name": "7 multiloop",
+   "length": 92,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 1708,
+   "solved_here": true
+  },
+  {
+   "puzzle": 75,
+   "name": "Misfolded Aptamer 6",
+   "length": 75,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 91,
+   "solved_here": true
+  }
+ ]
+}

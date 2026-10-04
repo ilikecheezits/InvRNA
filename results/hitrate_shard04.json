@@ -1,0 +1,76 @@
+{
+ "experiment": "hitrate",
+ "meta": {
+  "timestamp": "2026-10-04T17:33:33",
+  "host": "r035.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47416591",
+  "slurm_task": "4",
+  "cpus": "32",
+  "args": {
+   "command": "hitrate",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "n_samples": 20000,
+   "gate_samples": 200,
+   "chunk": 2000,
+   "shard": 4,
+   "n_shards": 8
+  },
+  "git": "ac06f07",
+  "viennarna": "2.7.2"
+ },
+ "n_samples": 20000,
+ "seconds": 14.561332702636719,
+ "rows": [
+  {
+   "target": "chain_m4_s4",
+   "structure": "((((....))))..((((....))))..((((....))))..((((....))))",
+   "length": 54,
+   "pairs": 16,
+   "source": "synthetic",
+   "uniform_hit": 0.0002,
+   "uniform_distinct": 4,
+   "uniform_gc": 0.49923796296296297,
+   "boltzmann_hit": 0.0395,
+   "boltzmann_distinct": 790,
+   "boltzmann_gc": 0.7132601851851851,
+   "best_baseline": 0.0395
+  },
+  {
+   "target": "junction_d3_s3",
+   "structure": "(((.(((....))).(((....))).)))",
+   "length": 29,
+   "pairs": 9,
+   "source": "synthetic",
+   "uniform_hit": 5e-05,
+   "uniform_distinct": 1,
+   "uniform_gc": 0.49847068965517244,
+   "boltzmann_hit": 0.009,
+   "boltzmann_distinct": 180,
+   "boltzmann_gc": 0.7057379310344828,
+   "best_baseline": 0.009
+  },
+  {
+   "target": "taneda_26",
+   "structure": "((((((.(((((((((((((((((((((..((((...))))...........)))))))))))))))))))))))))))",
+   "length": 79,
+   "pairs": 31,
+   "source": "Rfam",
+   "uniform_hit": 0.0051,
+   "uniform_distinct": 102,
+   "uniform_gc": 0.5000253164556961,
+   "boltzmann_hit": 0.07015,
+   "boltzmann_distinct": 1403,
+   "boltzmann_gc": 0.8230898734177216,
+   "best_baseline": 0.07015
+  }
+ ]
+}

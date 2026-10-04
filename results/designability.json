@@ -1,0 +1,95 @@
+{
+ "experiment": "designability",
+ "meta": {
+  "timestamp": "2026-10-04T17:37:58",
+  "host": "r008.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47416585",
+  "slurm_task": null,
+  "cpus": "32",
+  "args": {
+   "command": "designability",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "n_walkers": 256,
+   "n_steps": 400,
+   "n_targets": 4,
+   "targets": null
+  },
+  "git": "ac06f07",
+  "viennarna": "2.7.2"
+ },
+ "rows": [
+  {
+   "target": "taneda_28",
+   "structure": "..((((((((.(((((....)))))...))))))))..((((.((.................))..)).))..",
+   "designable": true,
+   "n_distinct": 50,
+   "reverified": 50,
+   "best_gap": 0.0,
+   "seconds": 53.842368841171265,
+   "examples": [
+    "AAGGUUAUAUAUUUGGCGAGCCAAGACCAUGUAGCCGGGCCGCGCACUUCACUUAUUAUCAAGCAACGAGCAA",
+    "ACAAUCCGGGGCCUCGAAACCGAGGGAAUCCGGGUUUCCGGCCGGUUUCUAGUCAGUUUUAUCCAAGCGCGAU",
+    "ACAGCGUGUCAGGUGCGAAGGCGCCCAGGACAUGCUAAGCUCCGCAGAUUCAAUCAUAAACCGCACGAUGCAG",
+    "ACAUGCUCCGCAUAGUGGGCACUAUCUCCGGGGCAUCCCGCCCGCCAAUCCAUUGUUAAUCUGCUAGGUCGUA",
+    "ACCAAACGGCUGUGGUAGCAACCAUGUCGCCGUUUGUUGUCGAGCGCCCAAACUGUUUAAAAGCCACGUACGU"
+   ]
+  },
+  {
+   "target": "taneda_6",
+   "structure": ".(((((.....((((.((((.......((((.....................(((......)))))))...)))))))).....)))))",
+   "designable": true,
+   "n_distinct": 67,
+   "reverified": 67,
+   "best_gap": 0.0,
+   "seconds": 86.78319120407104,
+   "examples": [
+    "AAGACGAUAAGGCCAGCUGAGCCGUAAGCCACCCAACGACCUCUUUUAUAACGACAUGAACGUCUGGCAGAUCAGUGGCGCCGCCGUUU",
+    "AAGGGAUUUCGUUUGCGACACUUAUUUCGGUAAAAUUCACACACAGUUGGCAUGCCUUCAAGCAAUCGUUCUGUCCAAAAUCGUUUCCU",
+    "AAUGGGAGGAGAGUUAGUAUCAGAUACGCCAAACGAGACGCACUGUAAUAUAUGGAAUCAACCAUGGCUAAGUACAACUACAGGCCCAU",
+    "ACAAAUCUCACCGGGUCGAUUCUCUGUCCACACUACUGCAAUAUAUUUAACGGGCAUUAAGGCCGUGGUUUGUCGCCCGCUACCAUUUG",
+    "ACAUGACUCCAGCGGCGCCCCUUUUUGGAGCGACAUACUUAUCAAAUAUUCCGGCAUCGAAGCUGCUCGUUGGGCCCGCCGAUUUCGUG"
+   ]
+  },
+  {
+   "target": "taneda_19",
+   "structure": "((((((((.((..((((((((....(((.((.....)).))).........))))))...))..)))))))))).........",
+   "designable": true,
+   "n_distinct": 173,
+   "reverified": 173,
+   "best_gap": 0.0,
+   "seconds": 77.25290322303772,
+   "examples": [
+    "AACAUUUGUGCACUACUCUAGCAAUACGCGGCUCUUCCACGUUUCUCCGUCCUAGAGAUCUAAGGCCAAAUGUUAGAUCGAAC",
+    "AACCUGGGGCAGUCCCGCCGCAAACUCGGUAUAUGUUAGCGAAAUCUUCGGGCGGUGAUAGGUAUGUUCGGGUUAAUCAUCGG",
+    "AAGGGGGUCAGGACUUCUGCAAUUACCCAAGUGCCUCUCGGGAUCAUCUCAUGUAGAAUUAGCGCUAUCCUCUUGUCAAGACU",
+    "AAGGGUGUGAGGAUCGGCCUAAUUUCCAUAGAACUGCUUUGGCGAGCUACGUAGGUCAGGGACGCUGCACCUUUGACAGAUGC",
+    "AAUGACGCACUAAUUUCCAACGAUGUGGUGAACCCCUCCCCAAUGCGAAGAGUUGGACUGGACGAGGUGUUAUUGAACCAGGC"
+   ]
+  },
+  {
+   "target": "junction_d5_s3",
+   "structure": "(((.(((....))).(((....))).(((....))).(((....))).)))",
+   "designable": true,
+   "n_distinct": 237,
+   "reverified": 237,
+   "best_gap": 0.0,
+   "seconds": 21.286216974258423,
+   "examples": [
+    "ACCACUGUAAACAGGGCCGUCAGGCAGUGAUUUCACAAGAGCAAUCUGGGU",
+    "ACCAGGUAAUGACCCGUCUUAUGACCACCGUUUGGUACCCGUUGGGGAGGU",
+    "ACCGACGGCUAUGUACUGAAUGCAGAUGGAACCCCACGGAAACUUCCAGGU",
+    "ACCGCUUGAAGAAGACCAUGGAUGGACCGACGUCGGACGCGAACGCGAGGU",
+    "ACCUUCCUCUUGGAUACAGAAAUGUCGGUGCGAACCCGCCAUUCGGCUGGU"
+   ]
+  }
+ ]
+}

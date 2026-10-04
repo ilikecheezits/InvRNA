@@ -1,0 +1,76 @@
+{
+ "experiment": "hitrate",
+ "meta": {
+  "timestamp": "2026-10-04T17:33:27",
+  "host": "r023.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47416588",
+  "slurm_task": "1",
+  "cpus": "32",
+  "args": {
+   "command": "hitrate",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "n_samples": 20000,
+   "gate_samples": 200,
+   "chunk": 2000,
+   "shard": 1,
+   "n_shards": 8
+  },
+  "git": "ac06f07",
+  "viennarna": "2.7.2"
+ },
+ "n_samples": 20000,
+ "seconds": 7.818160057067871,
+ "rows": [
+  {
+   "target": "chain_m2_s6",
+   "structure": "((((((....))))))..((((((....))))))",
+   "length": 34,
+   "pairs": 12,
+   "source": "synthetic",
+   "uniform_hit": 0.3827,
+   "uniform_distinct": 7654,
+   "uniform_gc": 0.5016882352941177,
+   "boltzmann_hit": 0.8906,
+   "boltzmann_distinct": 17812,
+   "boltzmann_gc": 0.7738117647058822,
+   "best_baseline": 0.8906
+  },
+  {
+   "target": "hairpin_s8",
+   "structure": "((((((((....))))))))",
+   "length": 20,
+   "pairs": 8,
+   "source": "synthetic",
+   "uniform_hit": 0.64735,
+   "uniform_distinct": 12947,
+   "uniform_gc": 0.5001625,
+   "boltzmann_hit": 0.969,
+   "boltzmann_distinct": 18443,
+   "boltzmann_gc": 0.822205,
+   "best_baseline": 0.969
+  },
+  {
+   "target": "junction_d5_s5",
+   "structure": "(((((.(((((....))))).(((((....))))).(((((....))))).(((((....))))).)))))",
+   "length": 71,
+   "pairs": 25,
+   "source": "synthetic",
+   "uniform_hit": 0.0026,
+   "uniform_distinct": 52,
+   "uniform_gc": 0.5006253521126761,
+   "boltzmann_hit": 0.05675,
+   "boltzmann_distinct": 1135,
+   "boltzmann_gc": 0.7650514084507042,
+   "best_baseline": 0.05675
+  }
+ ]
+}
