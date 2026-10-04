@@ -3,7 +3,7 @@
 #SBATCH --partition=GPU-shared
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=5
 #SBATCH --gres=gpu:v100-32:1
 #SBATCH --time=08:00:00
 #SBATCH --output=logs/%x_%j.out
