@@ -1,0 +1,68 @@
+{
+ "experiment": "eterna",
+ "meta": {
+  "timestamp": "2026-10-04T17:41:21",
+  "host": "r232.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47416596",
+  "slurm_task": "2",
+  "cpus": "32",
+  "args": {
+   "command": "eterna",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "seconds": 120.0,
+   "max_puzzle_length": 100,
+   "shard": 2,
+   "n_shards": 10
+  },
+  "git": "ac06f07",
+  "viennarna": "2.7.2"
+ },
+ "seconds": 120.0,
+ "rows": [
+  {
+   "puzzle": 8,
+   "name": "G-C Placement",
+   "length": 12,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 114507,
+   "solved_here": true
+  },
+  {
+   "puzzle": 26,
+   "name": "stickshift",
+   "length": 26,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 162830,
+   "solved_here": true
+  },
+  {
+   "puzzle": 46,
+   "name": "Triple Y",
+   "length": 97,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 142,
+   "solved_here": true
+  },
+  {
+   "puzzle": 67,
+   "name": "Simple Single Bond",
+   "length": 61,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
+  }
+ ]
+}

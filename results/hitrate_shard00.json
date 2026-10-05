@@ -1,0 +1,90 @@
+{
+ "experiment": "hitrate",
+ "meta": {
+  "timestamp": "2026-10-04T17:33:27",
+  "host": "r008.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47416587",
+  "slurm_task": "0",
+  "cpus": "32",
+  "args": {
+   "command": "hitrate",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "n_samples": 20000,
+   "gate_samples": 200,
+   "chunk": 2000,
+   "shard": 0,
+   "n_shards": 8
+  },
+  "git": "ac06f07",
+  "viennarna": "2.7.2"
+ },
+ "n_samples": 20000,
+ "seconds": 8.14385199546814,
+ "rows": [
+  {
+   "target": "chain_m2_s4",
+   "structure": "((((....))))..((((....))))",
+   "length": 26,
+   "pairs": 8,
+   "source": "synthetic",
+   "uniform_hit": 0.10915,
+   "uniform_distinct": 2183,
+   "uniform_gc": 0.4997,
+   "boltzmann_hit": 0.6997,
+   "boltzmann_distinct": 13994,
+   "boltzmann_gc": 0.7214307692307691,
+   "best_baseline": 0.6997
+  },
+  {
+   "target": "hairpin_s6",
+   "structure": "((((((....))))))",
+   "length": 16,
+   "pairs": 6,
+   "source": "synthetic",
+   "uniform_hit": 0.6046,
+   "uniform_distinct": 12079,
+   "uniform_gc": 0.49934375,
+   "boltzmann_hit": 0.96105,
+   "boltzmann_distinct": 15905,
+   "boltzmann_gc": 0.7899875,
+   "best_baseline": 0.96105
+  },
+  {
+   "target": "junction_d5_s3",
+   "structure": "(((.(((....))).(((....))).(((....))).(((....))).)))",
+   "length": 51,
+   "pairs": 15,
+   "source": "synthetic",
+   "uniform_hit": 0.0,
+   "uniform_distinct": 0,
+   "uniform_gc": 0.500085294117647,
+   "boltzmann_hit": 0.00045,
+   "boltzmann_distinct": 9,
+   "boltzmann_gc": 0.6948039215686275,
+   "best_baseline": 0.00045
+  },
+  {
+   "target": "taneda_8",
+   "structure": ".((((((.(((((...))))).......((((........))))...)))))).",
+   "length": 54,
+   "pairs": 15,
+   "source": "Rfam",
+   "uniform_hit": 0.001,
+   "uniform_distinct": 20,
+   "uniform_gc": 0.4991509259259259,
+   "boltzmann_hit": 0.0227,
+   "boltzmann_distinct": 454,
+   "boltzmann_gc": 0.708973148148148,
+   "best_baseline": 0.0227
+  }
+ ]
+}

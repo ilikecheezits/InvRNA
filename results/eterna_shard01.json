@@ -1,0 +1,68 @@
+{
+ "experiment": "eterna",
+ "meta": {
+  "timestamp": "2026-10-04T17:41:20",
+  "host": "r230.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47416595",
+  "slurm_task": "1",
+  "cpus": "32",
+  "args": {
+   "command": "eterna",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "seconds": 120.0,
+   "max_puzzle_length": 100,
+   "shard": 1,
+   "n_shards": 10
+  },
+  "git": "ac06f07",
+  "viennarna": "2.7.2"
+ },
+ "seconds": 120.0,
+ "rows": [
+  {
+   "puzzle": 3,
+   "name": "Prion Pseudoknot - Difficulty Level 0",
+   "length": 36,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 104493,
+   "solved_here": true
+  },
+  {
+   "puzzle": 25,
+   "name": "The Minitsry",
+   "length": 62,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 599,
+   "solved_here": true
+  },
+  {
+   "puzzle": 45,
+   "name": "[CloudBeta] 5 Adjacent Stack Multi-Branch Loop",
+   "length": 63,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 12996,
+   "solved_here": true
+  },
+  {
+   "puzzle": 66,
+   "name": "Bug 38",
+   "length": 36,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 333,
+   "solved_here": true
+  }
+ ]
+}
