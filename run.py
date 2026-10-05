@@ -723,15 +723,27 @@ def cmd_figures(args) -> None:
         fig, ax = plt.subplots(figsize=(6.5, 5.8))
         ax.errorbar(baseline, gflownet, yerr=summary["std"].fillna(0) * 100,
                     fmt="o", markersize=8, capsize=3, color=AQUA,
-                    ecolor=MUTED, elinewidth=1)
-        limits = [floor * 0.7, 200]
-        ax.plot(limits, limits, linestyle="--", color=MUTED, linewidth=1)
-        for _, row in summary.iterrows():
-            ax.annotate(row["target"],
-                        (max(row["best_baseline"] * 100, floor),
-                         max(row["mean"] * 100, floor)),
-                        textcoords="offset points", xytext=(7, -3),
-                        fontsize=6.5, color=MUTED)
+                    ecolor=MUTED, elinewidth=1, zorder=3)
+
+        # Limits from the data, not a fixed floor -- otherwise most of the
+        # panel is empty space below the lowest point.
+        low = min(baseline.min(), gflownet.min()) / 2.5
+        high = max(baseline.max(), gflownet.max()) * 2.5
+        limits = [low, high]
+        ax.plot(limits, limits, linestyle="--", color=MUTED, linewidth=1,
+                zorder=1)
+
+        # Points bunch up near saturation, so alternate the label side.
+        order = np.argsort(baseline.to_numpy())
+        side = {int(i): (1 if rank % 2 == 0 else -1)
+                for rank, i in enumerate(order)}
+        for i, row in summary.iterrows():
+            x = max(row["best_baseline"] * 100, floor)
+            y = max(row["mean"] * 100, floor)
+            offset = (10, 7) if side[int(i)] > 0 else (-10, -15)
+            ax.annotate(row["target"], (x, y), textcoords="offset points",
+                        xytext=offset, fontsize=7, color=INK,
+                        ha="left" if side[int(i)] > 0 else "right")
         ax.set_xscale("log")
         ax.set_yscale("log")
         ax.set_xlim(*limits)
