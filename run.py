@@ -789,7 +789,11 @@ def cmd_figures(args) -> None:
             axes[1].text(bar.get_width() * 1.02,
                          bar.get_y() + bar.get_height() / 2, f"{value:,}",
                          va="center", fontsize=7.5, color=MUTED)
-        write(fig, f"fig2_budget_{payload['target']}")
+        # The budget is part of the identity of the run: taneda_28 was run at
+        # both 600s and 300s, and a name keyed on the target alone silently
+        # overwrote the 600s figure with the 300s one.
+        write(fig, f"fig2_budget_{payload['target']}"
+                   f"_{payload['seconds']:.0f}s")
 
     # --- fig3: the crossover ------------------------------------------------
     records = sweep_records(args.out)
