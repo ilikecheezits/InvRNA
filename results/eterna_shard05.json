@@ -1,11 +1,11 @@
 {
  "experiment": "eterna",
  "meta": {
-  "timestamp": "2026-10-04T17:41:22",
-  "host": "r289.ib.bridges2.psc.edu",
+  "timestamp": "2026-10-04T20:39:08",
+  "host": "r036.ib.bridges2.psc.edu",
   "user": "szhang37",
   "python": "3.11.16",
-  "slurm_job": "47416599",
+  "slurm_job": "47421698",
   "slurm_task": "5",
   "cpus": "32",
   "args": {
@@ -19,50 +19,59 @@
    "no_taneda": false,
    "eval_samples": 2000,
    "seconds": 120.0,
-   "max_puzzle_length": 100,
+   "max_puzzle_length": 400,
    "shard": 5,
-   "n_shards": 10
+   "n_shards": 20
   },
-  "git": "ac06f07",
+  "git": "b1665e9",
   "viennarna": "2.7.2"
  },
  "seconds": 120.0,
  "rows": [
   {
-   "puzzle": 13,
-   "name": "square",
-   "length": 67,
+   "puzzle": 6,
+   "name": "Saccharomyces Cerevisiae - Difficulty Level 0",
+   "length": 379,
    "known_solvable_umfe": true,
    "known_solvable_mfe": true,
-   "n_distinct": 8629,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 26,
+   "name": "stickshift",
+   "length": 26,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 200832,
    "solved_here": true
   },
   {
-   "puzzle": 33,
-   "name": "Worm 1",
-   "length": 45,
+   "puzzle": 46,
+   "name": "Triple Y",
+   "length": 97,
    "known_solvable_umfe": true,
    "known_solvable_mfe": true,
-   "n_distinct": 573,
+   "n_distinct": 189,
    "solved_here": true
   },
   {
-   "puzzle": 54,
-   "name": "7 multiloop",
-   "length": 92,
+   "puzzle": 66,
+   "name": "Bug 38",
+   "length": 36,
    "known_solvable_umfe": true,
    "known_solvable_mfe": true,
-   "n_distinct": 1708,
+   "n_distinct": 271,
    "solved_here": true
   },
   {
-   "puzzle": 75,
-   "name": "Misfolded Aptamer 6",
-   "length": 75,
-   "known_solvable_umfe": true,
-   "known_solvable_mfe": true,
-   "n_distinct": 91,
-   "solved_here": true
+   "puzzle": 86,
+   "name": "Methaqualone C16H14N2O Structural Representation",
+   "length": 355,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
   }
  ]
 }

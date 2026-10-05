@@ -1,0 +1,77 @@
+{
+ "experiment": "eterna",
+ "meta": {
+  "timestamp": "2026-10-04T20:41:23",
+  "host": "r381.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47421856",
+  "slurm_task": "16",
+  "cpus": "32",
+  "args": {
+   "command": "eterna",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "seconds": 120.0,
+   "max_puzzle_length": 400,
+   "shard": 16,
+   "n_shards": 20
+  },
+  "git": "b1665e9",
+  "viennarna": "2.7.2"
+ },
+ "seconds": 120.0,
+ "rows": [
+  {
+   "puzzle": 17,
+   "name": "Six legd Turtle",
+   "length": 105,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 37,
+   "name": "Water Strider",
+   "length": 103,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 57,
+   "name": "multilooping fun",
+   "length": 36,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 77,
+   "name": "Hard Y and a bit more",
+   "length": 105,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 2,
+   "solved_here": true
+  },
+  {
+   "puzzle": 97,
+   "name": "Hoglafractal",
+   "length": 400,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
+  }
+ ]
+}

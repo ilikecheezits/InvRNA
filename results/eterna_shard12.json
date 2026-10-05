@@ -1,0 +1,77 @@
+{
+ "experiment": "eterna",
+ "meta": {
+  "timestamp": "2026-10-04T20:40:17",
+  "host": "r338.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47421744",
+  "slurm_task": "12",
+  "cpus": "32",
+  "args": {
+   "command": "eterna",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "seconds": 120.0,
+   "max_puzzle_length": 400,
+   "shard": 12,
+   "n_shards": 20
+  },
+  "git": "b1665e9",
+  "viennarna": "2.7.2"
+ },
+ "seconds": 120.0,
+ "rows": [
+  {
+   "puzzle": 13,
+   "name": "square",
+   "length": 67,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 6580,
+   "solved_here": true
+  },
+  {
+   "puzzle": 33,
+   "name": "Worm 1",
+   "length": 45,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 534,
+   "solved_here": true
+  },
+  {
+   "puzzle": 53,
+   "name": "Documenting repetitious behavior",
+   "length": 400,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 73,
+   "name": "Snowflake 4",
+   "length": 370,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 93,
+   "name": "Chicken Tracks",
+   "length": 116,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 0,
+   "solved_here": false
+  }
+ ]
+}

@@ -1,11 +1,11 @@
 {
  "experiment": "eterna",
  "meta": {
-  "timestamp": "2026-10-04T17:41:21",
-  "host": "r318.ib.bridges2.psc.edu",
+  "timestamp": "2026-10-04T20:39:50",
+  "host": "r147.ib.bridges2.psc.edu",
   "user": "szhang37",
   "python": "3.11.16",
-  "slurm_job": "47416582",
+  "slurm_job": "47421738",
   "slurm_task": "9",
   "cpus": "32",
   "args": {
@@ -19,46 +19,55 @@
    "no_taneda": false,
    "eval_samples": 2000,
    "seconds": 120.0,
-   "max_puzzle_length": 100,
+   "max_puzzle_length": 400,
    "shard": 9,
-   "n_shards": 10
+   "n_shards": 20
   },
-  "git": "ac06f07",
+  "git": "b1665e9",
   "viennarna": "2.7.2"
  },
  "seconds": 120.0,
  "rows": [
   {
-   "puzzle": 20,
-   "name": "InfoRNA bulge test 9",
-   "length": 42,
+   "puzzle": 10,
+   "name": "Frog Foot",
+   "length": 45,
    "known_solvable_umfe": true,
    "known_solvable_mfe": true,
-   "n_distinct": 7868,
+   "n_distinct": 31685,
    "solved_here": true
   },
   {
-   "puzzle": 43,
-   "name": "Recoil",
-   "length": 85,
+   "puzzle": 30,
+   "name": "Corner bulge training",
+   "length": 31,
    "known_solvable_umfe": true,
    "known_solvable_mfe": true,
-   "n_distinct": 78,
+   "n_distinct": 191625,
    "solved_here": true
   },
   {
-   "puzzle": 62,
-   "name": "Bug 18",
-   "length": 53,
-   "known_solvable_umfe": true,
-   "known_solvable_mfe": true,
-   "n_distinct": 199,
-   "solved_here": true
+   "puzzle": 50,
+   "name": "1,2,3and4bulges",
+   "length": 105,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
   },
   {
-   "puzzle": 92,
-   "name": "Mutated chicken feet",
-   "length": 100,
+   "puzzle": 70,
+   "name": "Pokeball",
+   "length": 184,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 90,
+   "name": "Gladius",
+   "length": 400,
    "known_solvable_umfe": false,
    "known_solvable_mfe": false,
    "n_distinct": 0,

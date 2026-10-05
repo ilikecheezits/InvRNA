@@ -1,0 +1,68 @@
+{
+ "experiment": "eterna",
+ "meta": {
+  "timestamp": "2026-10-04T17:41:22",
+  "host": "r312.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47416602",
+  "slurm_task": "8",
+  "cpus": "32",
+  "args": {
+   "command": "eterna",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "seconds": 120.0,
+   "max_puzzle_length": 100,
+   "shard": 8,
+   "n_shards": 10
+  },
+  "git": "ac06f07",
+  "viennarna": "2.7.2"
+ },
+ "seconds": 120.0,
+ "rows": [
+  {
+   "puzzle": 18,
+   "name": "snoRNA SNORD64",
+   "length": 67,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 1596,
+   "solved_here": true
+  },
+  {
+   "puzzle": 41,
+   "name": "Shortie 6",
+   "length": 35,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 2667,
+   "solved_here": true
+  },
+  {
+   "puzzle": 61,
+   "name": "Chicken feet",
+   "length": 67,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 89,
+   "name": "Short String 4",
+   "length": 97,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
+  }
+ ]
+}

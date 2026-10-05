@@ -1,11 +1,11 @@
 {
  "experiment": "eterna",
  "meta": {
-  "timestamp": "2026-10-04T17:41:22",
-  "host": "r312.ib.bridges2.psc.edu",
+  "timestamp": "2026-10-04T20:39:39",
+  "host": "r381.ib.bridges2.psc.edu",
   "user": "szhang37",
   "python": "3.11.16",
-  "slurm_job": "47416602",
+  "slurm_job": "47421737",
   "slurm_task": "8",
   "cpus": "32",
   "args": {
@@ -19,39 +19,48 @@
    "no_taneda": false,
    "eval_samples": 2000,
    "seconds": 120.0,
-   "max_puzzle_length": 100,
+   "max_puzzle_length": 400,
    "shard": 8,
-   "n_shards": 10
+   "n_shards": 20
   },
-  "git": "ac06f07",
+  "git": "b1665e9",
   "viennarna": "2.7.2"
  },
  "seconds": 120.0,
  "rows": [
   {
-   "puzzle": 18,
-   "name": "snoRNA SNORD64",
-   "length": 67,
+   "puzzle": 9,
+   "name": "The Sun",
+   "length": 258,
    "known_solvable_umfe": true,
    "known_solvable_mfe": true,
-   "n_distinct": 1596,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 29,
+   "name": "Quasispecies 2-2 Loop Challenge",
+   "length": 105,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 13,
    "solved_here": true
   },
   {
-   "puzzle": 41,
-   "name": "Shortie 6",
-   "length": 35,
+   "puzzle": 49,
+   "name": "Kudzu",
+   "length": 101,
    "known_solvable_umfe": true,
    "known_solvable_mfe": true,
-   "n_distinct": 2667,
+   "n_distinct": 1,
    "solved_here": true
   },
   {
-   "puzzle": 61,
-   "name": "Chicken feet",
-   "length": 67,
-   "known_solvable_umfe": false,
-   "known_solvable_mfe": false,
+   "puzzle": 69,
+   "name": "Headless Bug on Windshield",
+   "length": 200,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
    "n_distinct": 0,
    "solved_here": false
   },

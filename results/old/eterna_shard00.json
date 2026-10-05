@@ -1,0 +1,77 @@
+{
+ "experiment": "eterna",
+ "meta": {
+  "timestamp": "2026-10-04T17:43:21",
+  "host": "r220.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47416594",
+  "slurm_task": "0",
+  "cpus": "32",
+  "args": {
+   "command": "eterna",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "seconds": 120.0,
+   "max_puzzle_length": 100,
+   "shard": 0,
+   "n_shards": 10
+  },
+  "git": "ac06f07",
+  "viennarna": "2.7.2"
+ },
+ "seconds": 120.0,
+ "rows": [
+  {
+   "puzzle": 1,
+   "name": "Simple Hairpin",
+   "length": 16,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 1819273,
+   "solved_here": true
+  },
+  {
+   "puzzle": 23,
+   "name": "Shortie 4",
+   "length": 17,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 54028,
+   "solved_here": true
+  },
+  {
+   "puzzle": 44,
+   "name": "[CloudBeta] An Arm and a Leg 1.0",
+   "length": 63,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 1719,
+   "solved_here": true
+  },
+  {
+   "puzzle": 65,
+   "name": "Branching Loop",
+   "length": 40,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 104,
+   "solved_here": true
+  },
+  {
+   "puzzle": 95,
+   "name": "Multilooping 6",
+   "length": 82,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 253,
+   "solved_here": true
+  }
+ ]
+}

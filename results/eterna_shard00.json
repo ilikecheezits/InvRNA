@@ -1,11 +1,11 @@
 {
  "experiment": "eterna",
  "meta": {
-  "timestamp": "2026-10-04T17:43:21",
-  "host": "r220.ib.bridges2.psc.edu",
+  "timestamp": "2026-10-04T20:38:39",
+  "host": "r381.ib.bridges2.psc.edu",
   "user": "szhang37",
   "python": "3.11.16",
-  "slurm_job": "47416594",
+  "slurm_job": "47421691",
   "slurm_task": "0",
   "cpus": "32",
   "args": {
@@ -19,11 +19,11 @@
    "no_taneda": false,
    "eval_samples": 2000,
    "seconds": 120.0,
-   "max_puzzle_length": 100,
+   "max_puzzle_length": 400,
    "shard": 0,
-   "n_shards": 10
+   "n_shards": 20
   },
-  "git": "ac06f07",
+  "git": "b1665e9",
   "viennarna": "2.7.2"
  },
  "seconds": 120.0,
@@ -34,44 +34,44 @@
    "length": 16,
    "known_solvable_umfe": true,
    "known_solvable_mfe": true,
-   "n_distinct": 1819273,
+   "n_distinct": 1882230,
    "solved_here": true
   },
   {
-   "puzzle": 23,
-   "name": "Shortie 4",
-   "length": 17,
+   "puzzle": 21,
+   "name": "Tilted Russian Cross",
+   "length": 105,
    "known_solvable_umfe": true,
    "known_solvable_mfe": true,
-   "n_distinct": 54028,
+   "n_distinct": 162,
    "solved_here": true
   },
   {
-   "puzzle": 44,
-   "name": "[CloudBeta] An Arm and a Leg 1.0",
-   "length": 63,
+   "puzzle": 41,
+   "name": "Shortie 6",
+   "length": 35,
    "known_solvable_umfe": true,
    "known_solvable_mfe": true,
-   "n_distinct": 1719,
+   "n_distinct": 3079,
    "solved_here": true
   },
   {
-   "puzzle": 65,
-   "name": "Branching Loop",
-   "length": 40,
-   "known_solvable_umfe": true,
-   "known_solvable_mfe": true,
-   "n_distinct": 104,
-   "solved_here": true
+   "puzzle": 61,
+   "name": "Chicken feet",
+   "length": 67,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
   },
   {
-   "puzzle": 95,
-   "name": "Multilooping 6",
-   "length": 82,
-   "known_solvable_umfe": true,
-   "known_solvable_mfe": true,
-   "n_distinct": 253,
-   "solved_here": true
+   "puzzle": 81,
+   "name": "Campfire",
+   "length": 212,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
   }
  ]
 }

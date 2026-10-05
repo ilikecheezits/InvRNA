@@ -1,0 +1,3469 @@
+{
+ "experiment": "sweep",
+ "meta": {
+  "timestamp": "2026-10-04T21:15:30",
+  "host": "v014.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47422962",
+  "slurm_task": "19",
+  "cpus": "5",
+  "args": {
+   "command": "sweep",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 20000,
+   "n_targets": 10,
+   "seeds": [
+    0,
+    1,
+    2
+   ],
+   "sweep_max_length": 90,
+   "targets": null,
+   "task_id": 19,
+   "list": false,
+   "iterations": 3000,
+   "batch_size": 512,
+   "learning_rate": 0.002,
+   "learning_rate_logz": 0.1,
+   "reward_beta": 1.0,
+   "epsilon": 0.05,
+   "grad_clip": 1.0,
+   "log_every": 50,
+   "d_model": 128,
+   "n_heads": 4,
+   "n_layers": 3,
+   "attention_window": null
+  },
+  "git": "34567db",
+  "viennarna": "2.7.2",
+  "torch": "2.5.1+cu121",
+  "gpu": "Tesla V100-SXM2-32GB"
+ },
+ "records": [
+  {
+   "target": "chain_m3_s6",
+   "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+   "length": 52,
+   "seed": 1,
+   "gflownet_hit": 0.52075,
+   "gflownet_distinct": 10415,
+   "mean_hamming": 35.33819095477387,
+   "solutions": [
+    "AAAACUAGAUAGUUUUAAGUUAUAAAGUUAUAACCUGUCCCGUCAGCGGGAC",
+    "AAAAGCUCCCGCUUUUAUGCUAGAGACGUCUAGUGCCUAUCGGUAACGGUGG",
+    "AAAAUAUAAUUAUUUUUUCGGAAACUCUUUUCCGUAACUUCGACCCUGAGGU",
+    "AAACAGACGACUGUUUGCUAUGAUGUGUGUUAUGAGAGUCUCGACCGGGGCU",
+    "AAACAUAUUAAUGUUUAUGUAUUGAGACCGAUGCCUUGUUUGUUAGCAGACA",
+    "AAACAUUAUCAUGUUUUGGGCUCAAUCCUGAGCUAGUAGUCUUAGUAGAUUA",
+    "AAACCCGCGAGGGUUUAGGGCAGCCACUGUUGCUACGCAAGUUUUAAUUUGC",
+    "AAACCGAGCGCGGUUUUCCGGGGGUUGCUUCCCGACCAUGUGACGGCACGUG",
+    "AAACGCGUUAGCGUUUUUUCAUCUUAGGAGGUGACUGGUCAAAGUCUUGAUU",
+    "AAACGGUUCCCCGUUUAGUGUGGACUAUUCCACGAAUAACUUGGAUGAGUUA",
+    "AAAGAGCCGGCUUUUUAAAUGUGCUUGCGUACAUAAUCUUUUAGGUAGAGGA",
+    "AAAGGCUGCCGCCUUUUCAUAUCCUAAAGGAUGUUUACACCUAAUCGGGUGU",
+    "AAAGGCUUCCGUCUUUCUGCGCUAAUCUUAGUGCUAGUUAGCUUGGGCUGAC",
+    "AAAGGGUUCUCUUUUUUGAGCAGUCUUUGCUGCUACGGCUUGAGCUCAAGCU",
+    "AAAGGUUCUAACCUUUGCGUGGUGCUGACAUCAUAAGGCCGAAGACUCGGCC",
+    "AAAGUAUUCAUACUUUUGUAGCGCCUCGGUGUUAAAGGCUGGGUAACCAGCC",
+    "AAAGUAUUGUUGCUUUUGCCGGGGUUUACUCCGGGUCCGACUGCCAAGUUGG",
+    "AAAGUUUCUGAACUUUCCUGUUGUGUAAACAGCGAGGCUCAUUGAGAUGAGC",
+    "AAAUACAGGCGUAUUUAAUGCAGAUAAUUUUGCAGGCAUUGGAGUUCCAGUG",
+    "AAAUACUACAGUGUUUAUUGAUUAGUCCUGGUUAUGAUCCGUAAUAGCGGAU",
+    "AAAUCAACCUUGAUUUCAGCGGAUUUAAGUUCGCCGGCUUUUAUUAAAGGGU",
+    "AAAUCAAGCGUGAUUUGCCAAGUUCGUAGACUUGAAGUGGCCUCAAGGCUAU",
+    "AAAUCACAUAUGAUUUAAGCAACAGGACUGUUGCGUCUUUGAGAUAUCAGAG",
+    "AAAUCUAAGUAGGUUUUAGAACGGUACGCUGUUUAGACUGGGUCGCUCCAGU",
+    "AAAUGCAAGUGCAUUUUAUCAAGUACAGACUUGGGGCACUUUCUCUGAGGUG",
+    "AAAUGCAUGCGCAUUUAUCGACGUCCUCACGUUGUCGCAUUUAACUGGGUGC",
+    "AAAUGCGAGUGCAUUUAAGCGCAUAGUAGUGUGCGAGGGAGCCGCGGUUCCU",
+    "AAAUUCUAAAGAAUUUCCUAGUACUUACGUACUAUAGGCUCCGCUGGGGGCC",
+    "AAAUUGUAAACAAUUUGAGUUGGCAGGGGCUGACAGUACGGAGAGAUCCGUA",
+    "AACAACAACAGUUGUUAACGUCGACCUUUCGACGGAGAUGUACGGCUGCAUC",
+    "AACAAGCCAACUUGUUCUGUGUUUAACCGAACGCUCGUGUUAUAUCUAAUAU",
+    "AACAAGGUUGCUUGUUAGUGGUCUCCGCGGGCCGUAGUGUUCAGCCGGGCAU",
+    "AACAAGUAGCUUUGUUCUGUCAUUAGUUGGUGAUUAGACUGGCCAGCCGGUC",
+    "AACACCUGGAGGUGUUAGGCGCAGCAAUUUGCGUAACGCUCGGAGGCGGGCG",
+    "AACACGAAGCCGUGUUAAGCUGCGUCGCUGUAGCCCUCGAUUGAUCGGUCGA",
+    "AACACUUAGGAGUGUUCGCCUGCCUCGAGGCAGGACCGCCAGAGCUCUGGCG",
+    "AACAGGCCCACCUGUUUCAAACGCCAUCGCGUUUUACACGUCACUAGGCGUG",
+    "AACAUCGAGAGGUGUUUAGCGGUCAAUAGAUCGCGAUGCUUUGUUAAAGGUA",
+    "AACAUCGUGUGAUGUUAUUUCUGCCAGCGCAGGAUUUUACUACAAAUAGUGA",
+    "AACCAGGAUCCUGGUUCUGCUCUUAACAAAGGGUUGCCCCGAGCUUUCGGGG",
+    "AACCCCGCAGGGGGUUAUCUAUGUUGAAGCAUGGUGGGUUAUGGGUAUGAUC",
+    "AACCCUAUGAGGGGUUAGUGGGCACUGUUGCUCAAACGAGGACCGAUCCUUG",
+    "AACCCUUUAGAGGGUUUCUCUUGCAUCGGCAAGAAUCAGUUGCGUUUAACUG",
+    "AACCGACUGAUCGGUUUCGUACUUUACCAAGUGCAAGUCGCUAGCCGGCGGC",
+    "AACCGUAACGACGGUUUGCGGCAGGAGACUGUUGAAGCGCAACCGAUUGUGC",
+    "AACCUACAGCUAGGUUUAGGAUGAACAAUUAUUCAAGGGUUCUACCGGACUU",
+    "AACCUACUGUUGGGUUUUCGGCUUAAUCAGGCCGUUUUGAGAUUAUUCUCAA",
+    "AACCUUUCGGAGGGUUUAGUUGUGAUGUCAUGGCCGCUGGGAACUAUCUCGG",
+    "AACCUUUGAUAGGGUUGAGACUGCACCUGCAGUCACCUGGGUCACCAUCUAG",
+    "AACGCAUACUUGUGUUUUUGUUUGUCGUCAGACGCUGUGCUCUAAAGGGCAU",
+    "AACGCCCAUUGGCGUUGUGCCAUGUUCACGUGGUCUGCGUUUACGUAAGCGU",
+    "AACGCUGCUCGGCGUUGAUUUCCUAUUCAGGAGAAGUUGGAUAUGAGUCCGA",
+    "AACGCUGUGUAGUGUUUUGGCCGUGGUAACGGCCUGCUGGCCAAUCGGUUAG",
+    "AACGCUUCUGGGCGUUUCGCCGUGUAAUCGCGGCAAGCUUGUGCCUGCAAGC",
+    "AACGGUUAUCGCCGUUAGCCGGGCGUGGGCCUGGAAUGCGGAUGUAUCUGCA",
+    "AACGUACAUUUGCGUUACUCAGAUAGCGAUUUGAAUCGUACGAUCUCGUAUG",
+    "AACGUUAUCCAACGUUCCCACCUGUAGUUAGGUGACGGCCCAGAUGUGGGUU",
+    "AACGUUUACUAACGUUUAUAUCUGACUGCGGAUAAGAGGUGCAACUGCGCCU",
+    "AACGUUUGAUAGCGUUUGCCUAGGAGCUUUUAGGACGGCUGGAAUACCAGUC",
+    "AACUAAGAUGUUGGUUGACUGGUAUCGAUACUAGAUGGAUUGUAUUCGAUCC",
+    "AACUAGUCAGCUGGUUGCGCUUACAUCUGUGGGCAAAGGCACCUCUGUGCUU",
+    "AACUCAAAUAUGAGUUCCUUUGCUUUAUAGCAAGAUGGCUGACAUGUUAGCC",
+    "AACUGAACCUUCGGUUAAGCGACCGGUCGGUUGCAUGGAGUUUUGAAGCUCU",
+    "AACUGAAUCUUCAGUUAGUGGGUAGUGGUAUCCGACCGAGCGAAAACGCUCG",
+    "AACUGAGCCAUCAGUUAUGUUGUCACUGGGCGACUGGCCUACAUUGGUGGGC",
+    "AACUGAGUAGUCAGUUUCAAGUCACAUGUGACUUAAGGACGUGGGCGCGUCC",
+    "AACUGAGUAUUCAGUUGAAGUUGUUGCGAUAACUAUCCGCAUCAAGAUGCGG",
+    "AACUGAUACAUUGGUUUAGAGGUUUGUAGACCUCGAUUGGGUAUAAAUCCAA",
+    "AACUGGAUCGCCGGUUACUUCUGUGUGUGCAGGGUCCUAAACGACGGUUUGG",
+    "AACUGGUCGUCCAGUUUAGCAUGUGGUUAUAUGUAGGUGGAGAGUUUUCUAC",
+    "AACUGGUUAACUGGUUCAGGGAGCUUAUGCUUUCAUCGUCAAUAAAUUGACG",
+    "AACUGUCCAUACAGUUUAUAUUGAUCAAUCAAUGCGUACUUAUGAUUGAGUG",
+    "AACUGUUUCCACGGUUUCGUGUAGGAAACUGCACCGCCUUUGCUCACAAGGG",
+    "AACUGUUUGAACGGUUUAACUUGCAGAUGUGAGUAAGGGGGUAAAUGCCCCU",
+    "AACUUCCCCUGGAGUUCACGAGCGCGGGCGCUCGAGAGAUCUUAUGAGAUCU",
+    "AACUUCUCGUGGGGUUACGGUCGUUCUCGCGGCUCACGUGGAAUUUUCCACG",
+    "AACUUGACAGCGAGUUACGCAAACCGUCGUUUGUUUCAUCCCUGCGGGGAUG",
+    "AACUUUAGAAGAGGUUAUUUGUGCUUUCGCGCAAUGGAUGCAGAAAUGUAUU",
+    "AACUUUCGAUAGAGUUGGGCGUGACAGUUCACGUAACGCUAAGUUGUUGGCG",
+    "AAGAAGGGAUCUUUUUACAAUCUCCAACGAGGUUUGGAUAUAUCAUUAUAUC",
+    "AAGAAUUCAUAUUCUUCACUAUUUUGUCGAAUAGCAAGUGCUGCUCAGCGCU",
+    "AAGACGGGGAUGUCUUACCCCUGAGGAAUCAGGGCUCCGGGGCUCCCUCCGG",
+    "AAGACUAGUGGGUCUUAUUUAACUUCAUAGUUAGCGCGUAACUGUUGUUACG",
+    "AAGACUCAUAGGUCUUAAUGCUACAGUUGUGGCACAAGAGUGUAGUCACUUU",
+    "AAGACUCGGGAGUCUUAACGGCUUGUGUAAGCCGCGUUUUGUUUGUGCAGGA",
+    "AAGACUGUCAAGUCUUAAUACUUCUGUCGAAGUGAAGGUAAUGAAUAUUACC",
+    "AAGAGCCAUGGCUCUUACUCUGAUCCAGAUCAGGCUGGCCUCCUAAGAGGCC",
+    "AAGAGGUUAACUUCUUCAGAAUAGUACUUUAUUCGCGCUUUCCCUAGAAAGC",
+    "AAGAUCCACCGAUCUUAUUGACUGAGCCCGGUUAUGGCGAAAUACUUUUCGU",
+    "AAGAUGAACCCGUUUUUUCAACCAGGGAUGGUUGUAUGUAGCACAUGCUAUA",
+    "AAGAUGCACUCAUCUUGAGACGUGACUCCGCGUUAAGUCAGGAAGCCUUGAC",
+    "AAGAUGUAUACAUCUUUACCCCAGGAGGCUGGGGAAUAUGGCACAGGCUAUG",
+    "AAGCAGCACUUUGUUUACAUUUUUACGGGAAAAUUGGUGGCCCGAGGGCUAU",
+    "AAGCCCUUCAGGGCUUAUGUCGUUCGCAGACGACCGGAUGGGAUAGCCCGUC",
+    "AAGCGAGUUUUCGCUUCUUUGGACAUCCGUCCGAUUUGUUGAGCACUUAACA",
+    "AAGCGCUGGUGUGUUUAAGCUUUAGCUUUGAAGCGAUCUCGGUUAUUCGAGA",
+    "AAGCGGAACUCCGCUUGCCUUAGCCACUGCUAAGAUGAUCUGACUGCGGGUC",
+    "AAGCGGAGAUCUGCUUACGCGCUAAUUCUGGCGCCACCUUACUUAGGUGAGG",
+    "AAGCGGAGCCCCGCUUCGUUGGUCGCACGGCCAAAUUGUUUCUUCUGAGACA",
+    "AAGCGGGAUACUGUUUAGUGCUCCCUCAGGAGCAAAUUCCCAUAGCUGGGAA",
+    "AAGCGGGUUACUGCUUAUGGCUGAUGUCUUGGCUCAGGCGUGUCUCUACGCU",
+    "AAGCGUCCCAAUGCUUCCGACGGUGGGAACCGUCCAAUGUUGUUACCAACGU",
+    "AAGCGUCUAGACGCUUAAGCUAUAAUAAUAUGGCGUGUUAUACCGGUAUAAC",
+    "AAGCUACAGGUGGCUUGCUUGAUCUGAUGAUCGAAUGUACCGAAACCGGUAU",
+    "AAGCUCACAUGGGUUUGAGUGAUAUGUUUAUCGCCGGACAUUGCAAGAUGUC",
+    "AAGCUGCGAAUAGCUUUACUGAAUAUGUAUUCAGGUCUGGGUUAAAACCCGG",
+    "AAGCUGCGUACAGCUUUGCUUUGGGUGGCCAGAGAGGUCUUUUUGAGAAGAC",
+    "AAGCUGUAAUUAGUUUGCACCUGGUUAACCGGGUAAGCUCUAGGAUUAGAGU",
+    "AAGGACCGAUGUCUUUCUUACAGGAGAUCUUGUAUUCAUCCGGGACUGGGUG",
+    "AAGGAGACGACUCUUUAACCUUUCCUAUGAAGGGCCCCUCGUGGAAACGAGG",
+    "AAGGAUCCGAAUUCUUUCGCACGCGCGAGUGUGCACGUAUUGCUGGCAAUAC",
+    "AAGGAUUAUAAUCUUUAAUUGUUACAUCUGACGACUCGUCAAAGCUUUGACG",
+    "AAGGAUUUGAAUUCUUGAUGCCGUAAACGCGGCAGGAGUAGCCAAUGUUACU",
+    "AAGGCAGGAUUGUCUUGAGGCCGGAUUCCCGGCUAGUCUGGGUUGACCUGGA",
+    "AAGGCCAACUGGCCUUACACUCCUGUGGAGGAGUCAGGGCUCUCCAGGGCCC",
+    "AAGGCCUUUCGGCUUUGAGUUCAUAAGAGUGGAUAGCAGUUCAUGGGGGCUG",
+    "AAGGCUCGGAAGUCUUUGGGCCACGAAAGUGGCCAUGCGCUAUAACUAGCGC",
+    "AAGGCUUAGAGGUCUUUAUCAAAGUAUACUUUGAAUGCCCCUUGAGGGGGGC",
+    "AAGGGAUAGUUCUCUUAGGGCCCAGUAGUGGGCCACGUCAUGUGACUAUGAC",
+    "AAGGGCUAAUGUCCUUGUUAGCGUUACCACGCUAUGUUCCUAGUGAUGGGAA",
+    "AAGGGCUCGCGCUUUUAUGCGCCUUGGGAGGCGUCAACUCCGAUAGUGGAGU",
+    "AAGGGGAAGACCUCUUGCUGUGCCACCGGGCGCGUGAGCCUGAAGACAGGCU",
+    "AAGGGGAAUACUCCUUCGGGGUUACAUUUGGCCCAGCCUGAUGCUCGUCAGG",
+    "AAGGGGAUGACUCCUUAGCUGUUGACUACGACAGGGGCCAUUUAGUAAUGGC",
+    "AAGGGUCUAGGCUCUUAAGGUCUUGCAAAAGAUUAUGCGUUCAGUGGGAUGU",
+    "AAGGUAUCGGUGCCUUAGCGGAUGGAUUCAUCCGAUACUUGGCAGACUAGGU",
+    "AAGGUCCUACGGCCUUAACACGUACCGAUACGUGCUUUGGCUAUCUAGCUGA",
+    "AAGGUCUACGGACUUUAACUCGCACUAUUGCGAGAGAGAUUAACUGUAAUCU",
+    "AAGGUUACAAAACCUUAUGUAGCUAAGUAGCUAUCAGGGUGUGAGCGCACCU",
+    "AAGUAAUAAUUUGCUUUCGCUGAUUCCUGUUGGCUUUCUGGGUUGCCCCAGA",
+    "AAGUAAUGUUUUGCUUUCUAGGUUAAAGGGCCUAAUGUUUGUGUCCGCGGGC",
+    "AAGUACAAUUGUGCUUGCGCUCGAUGGAUCGAGCAGCCUCCUCCAAAGGGGG",
+    "AAGUACAUAUGUGCUUAAAUGCUCUUAAGAGCAUGGGGUUCUCAUUGGGGCC",
+    "AAGUACGACAGUAUUUACCUGGGUAAGUGCUCAGAAUUCAUAACGAUAUGGA",
+    "AAGUACUAUCGUGCUUUUCCAUGAUAUCUUAUGGUAGUAGGCGUAGGCCUAC",
+    "AAGUAGAACGCUAUUUUAGCAGGGCAGUUUCUGCGAGCUUUGACGACAGGGC",
+    "AAGUCCAAUCGGAUUUACGUGGUUAUUUAGCUGCUUGUCCGCAUUAGUGGAC",
+    "AAGUCUAAGGGGACUUACGUGCGAUUACUUGUACUGUGAGCUAGCCAGUUCA",
+    "AAGUCUCAAUGGAUUUAACGGGCAAUAAUGCUCGGUAUGGUUGAUGAGCCGU",
+    "AAGUGAUAAAUUGCUUUAUACUUCAAUCGAAGUGGUCGAUUAAGAAUGGUCG",
+    "AAGUGCACUGGCAUUUAUCAUGGGUUUCCCCGUGCUACCGCUACCAAGCGGU",
+    "AAGUGCCCAUGCAUUUCAUUGAGACAAAUCUCAACCGCGUAGAAUCUUACGC",
+    "AAGUGCGCGUGCGCUUGAGGCUCUCCGAAGGGCUCACUUAUAGAGAUGUGAG",
+    "AAGUGCUUGUGCACUUUACGGGUCAAAAGGCUCGCAAAUCUUAAGCAAGGUU",
+    "AAGUGGAACCCUGCUUCAAGCGCGUUUUCGCGUUAAGGCGUUAAGAAAUGUC",
+    "AAGUGGAUCACCAUUUAGGGAUUUACAGAAAUCCAGCAUAGGAGGUCCUAUG",
+    "AAGUGGUAUACCACUUAUUGGGCUUCAAAGUCUAUAAGAACUACGGAGUUUU",
+    "AAGUUAACAAUAACUUAACUUUUGAACUCGAGAGAGGGGGCGCAGCCGUUCC",
+    "AAGUUAUAAUUGGCUUGACAUCUGGCUCCGGAUGGGCUCACUGAUAGGUGGG",
+    "AAGUUCCAGAGGACUUCUAGACGUGUGCACGUCUUUUCCGGUGGGCAUCGGA",
+    "AAGUUCUGUAGAAUUUACGCUCCUCAUCAGGGGCAACCUAAGUCUCUUUAGG",
+    "AAGUUUACUCAGACUUACGGCGCCUCACGGUGUUAAAUGGCUUGCUGGCUAU",
+    "AAUAAGAAGUCUUGUUUAGUUGGCUUUCGCCGACCCGGUGACGCACGUUAUC",
+    "AAUAAGUUCCCUUAUUUGCCCAUUAUGUAGUGGGAAGAAUUAUCGUUAAUUC",
+    "AAUACCACUUGGUGUUAGAGUUUCCAACGAAACUAAGGAUAGACGUCUGUUC",
+    "AAUACUGAGUGGUGUUACGGUAGAAAGCUCUGCCUAGCCAGACACCUCUGGU",
+    "AAUACUUAUUAGUGUUAGACUAAGGUUACUUAGUACGCUAGGUGAACCUGGU",
+    "AAUAUAACCUUGUGUUUUGGGACUGAUGGGUCCCUUGGCGGGUCGGCCUGCC",
+    "AAUAUCAAGGGAUAUUAAGUGAACUUGUGUUCGCGUGCCCUAAUUUUAGGGC",
+    "AAUAUCAAGUGAUGUUAAGCCCUGCUAUUAGGGUGGUUCACGAGCACGUGAA",
+    "AAUAUCUAGGGGUAUUAAGAUGAAAUAGUUUAUCCGGCAGGGGACACUCUGU",
+    "AAUAUGUUUCCAUAUUAUGAUCGUGUCAACGGUCGGGUCGAUGCUUAUCGAU",
+    "AAUCAGACCGCUGAUUCUGUGCUUAAGUAAGUACUUCACUAGCCGGCUAGUG",
+    "AAUCAUAGCUGUGAUUUAUGGGCGGCAGCGUCUACUUUCCGCAUUAGCGGAA",
+    "AAUCCACGAAUGGGUUAUACGUUUGAUCAGAUGUUAUCGGCGGUGGCGCCGA",
+    "AAUCCAGUAAUGGAUUGAGCCAAUUAAUGUUGGUAGGCUAUGACGUCGUAGU",
+    "AAUCCCAUACGGGAUUAUCUAGCUGCCAGGUUAGCCGUGCCGGAGAUGGCAU",
+    "AAUCCCUCCCGGGGUUUAGGAUCUUGGAAGAUCUGAAUGAGGUCACCCUCGU",
+    "AAUCCGAUGCUGGAUUUCCUCCUUGGUAAAGGAGUUAAGGAGAGCACUCUUU",
+    "AAUCCGUUAUCGGAUUUGAUUAUUUUAUAGUAGUAGGGAAACGAGUGUUUUU",
+    "AAUCCUUUGAGGGGUUUCCGUCCAGUACUGGGCGACAUUAGGUUAACUUAAU",
+    "AAUCUAACCGUAGAUUCAACUAAGACUGUUUGGUAACUACGCAUACGUGUGG",
+    "AAUCUCCACGGAGGUUAUUGUGCCAAAGGGUACGUCAUACUUCAUAAAGUGU",
+    "AAUCUGGCACUAGAUUACGGCCCCCCUCGGGGCCAAGGAAUUCAGUGAUUCU",
+    "AAUCUGGGUAUAGAUUAUGCCGGUCUCUACCGGUUUGGCUCUAGUUGGAGUU",
+    "AAUCUGUCAGCGGAUUCUCCAAUUAUGAGAUUGGCAUGCAUUGUUCAAUGCA",
+    "AAUCUUAACAAAGAUUAUUCCGUGUUCUCGCGGACUGUUGCUGCAAGGUGGC",
+    "AAUCUUAGAUAGGAUUAAUACUGGAUAACCAGUGGUCUUUAUUACUAUAAAG",
+    "AAUCUUGGCAAAGAUUGAGCGCUCCCGUGAGUGUGACAGACUUGAAAGUUUG",
+    "AAUGAAAAUCUUUAUUAUGUACGCAGGAGUGUAUUCAGUAUGUAUUUAUACU",
+    "AAUGAGUAACCUCGUUUGAUUCUAGCUCUGGAAUAACGCGGUGGAAACCGUG",
+    "AAUGAUAUAUAUCAUUAGAGGUUUGCCCGAGCCUAAUGUCACGAUGGUGACA",
+    "AAUGAUCUAUGUCGUUAGUUAUGUCCUUGCAUAAAAGGAACUCAGAAGUUCU",
+    "AAUGAUGGAUAUCAUUAGUCGCGAGAUGUUGCGAACGUAGUUUAGCGGCUGC",
+    "AAUGCACGCUUGUAUUGCGUCCCCCCAUGGGGGCCUCGUCCUGUGGAGGGCG",
+    "AAUGCAUCAGUGCAUUAAGUCGCUAGUCAGCGGCCCCCGUAACCAAUUACGG",
+    "AAUGCCACAAGGUGUUUAGGGGGCAGGCGUCUUCCAAGCUUUAACCGGAGCU",
+    "AAUGCGAAAACGCGUUAGUGGAGGACCGCCUCCGAGUACUGCCUAUGCAGUG",
+    "AAUGCGGGACCGCGUUGUGUUGUUCGUCAACGACUUGUUCCGGUAAUGGAAC",
+    "AAUGCUCAACGGUAUUUAGAGCAUGAGAAUGUUCAGGGAUGGGAAACCGUUU",
+    "AAUGCUCUUUAGCAUUGGAUAACCUUUUGGUUGUAAUUUAGACAGCUCUGAA",
+    "AAUGCUUAUUAGCGUUUCGAGUCUUCCGAGGUUCUUGCAGCGCCCUCGCUGC",
+    "AAUGGAAUCUUUCAUUAGGUGGCUAUAGGGUCACAGGUUGUCUUACGAUAGC",
+    "AAUGGAGUACUCCAUUCUUGGGUUUUUAGGCUCGUCUGGGGAUGUAUCCCUA",
+    "AAUGGAUAUUUCUAUUAGGACUCAGGGUUGAGUUGAGUAUCUACCAGGGUAC",
+    "AAUGGCGUGAGCUAUUGAUGCAUCGCCGGAUGCGCUCAGAUAAUACUGUCUG",
+    "AAUGGGCCUCCUCAUUAACGUUUCCCUUGAGAUGCACCGCUAGACAUAGCGG",
+    "AAUGUAUGCCUGCAUUUAGCGUGUUUCAACGCGUAGCUGGACUGGUGUCCGG",
+    "AAUGUCAGAUGACGUUGUUACUUGUUGCUAAGUACUUAUUCCCUCUGGAAUA",
+    "AAUGUCUAUGGACAUUGAGGUCCUUCAGAGGAUUAUAUGGCACUGAUGCUGU"
+   ],
+   "best_baseline": 0.4209,
+   "uniform_hit": 0.0964,
+   "boltzmann_hit": 0.4209,
+   "attention_window": null,
+   "train_seconds": 967.9190962314606,
+   "history": [
+    {
+     "iteration": 2600,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.708139419555664,
+     "batch_hit_rate": 0.416015625,
+     "mean_gap": 0.9794921884313226,
+     "log_z": 51.73176574707031
+    },
+    {
+     "iteration": 2601,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.994350433349609,
+     "batch_hit_rate": 0.435546875,
+     "mean_gap": 0.9861327903345227,
+     "log_z": 50.864463806152344
+    },
+    {
+     "iteration": 2602,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.1982622146606445,
+     "batch_hit_rate": 0.44921875,
+     "mean_gap": 0.9794922056607902,
+     "log_z": 50.887062072753906
+    },
+    {
+     "iteration": 2603,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.552497386932373,
+     "batch_hit_rate": 0.4609375,
+     "mean_gap": 0.9351562219671905,
+     "log_z": 51.6363525390625
+    },
+    {
+     "iteration": 2604,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.691324234008789,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.8234374755993485,
+     "log_z": 52.538543701171875
+    },
+    {
+     "iteration": 2605,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.545453071594238,
+     "batch_hit_rate": 0.466796875,
+     "mean_gap": 0.8746094014495611,
+     "log_z": 52.6187858581543
+    },
+    {
+     "iteration": 2606,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.386936187744141,
+     "batch_hit_rate": 0.474609375,
+     "mean_gap": 0.8640625113621354,
+     "log_z": 51.94208908081055
+    },
+    {
+     "iteration": 2607,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.206890106201172,
+     "batch_hit_rate": 0.45703125,
+     "mean_gap": 0.9105469100177288,
+     "log_z": 50.79047775268555
+    },
+    {
+     "iteration": 2608,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.827009677886963,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.925000037997961,
+     "log_z": 50.54230880737305
+    },
+    {
+     "iteration": 2609,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.554506301879883,
+     "batch_hit_rate": 0.466796875,
+     "mean_gap": 0.8455078436527401,
+     "log_z": 51.12496566772461
+    },
+    {
+     "iteration": 2610,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.796856880187988,
+     "batch_hit_rate": 0.462890625,
+     "mean_gap": 0.8781250016763806,
+     "log_z": 52.39274215698242
+    },
+    {
+     "iteration": 2611,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.793509483337402,
+     "batch_hit_rate": 0.498046875,
+     "mean_gap": 0.9310546764172614,
+     "log_z": 52.66536331176758
+    },
+    {
+     "iteration": 2612,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.428162097930908,
+     "batch_hit_rate": 0.455078125,
+     "mean_gap": 0.9152343827299774,
+     "log_z": 52.01007080078125
+    },
+    {
+     "iteration": 2613,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.622260570526123,
+     "batch_hit_rate": 0.4609375,
+     "mean_gap": 0.9341796962544322,
+     "log_z": 50.732879638671875
+    },
+    {
+     "iteration": 2614,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 7.177172660827637,
+     "batch_hit_rate": 0.451171875,
+     "mean_gap": 1.0263672024011612,
+     "log_z": 50.5304069519043
+    },
+    {
+     "iteration": 2615,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.093268394470215,
+     "batch_hit_rate": 0.50390625,
+     "mean_gap": 0.8103515719994903,
+     "log_z": 51.2870979309082
+    },
+    {
+     "iteration": 2616,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.053920745849609,
+     "batch_hit_rate": 0.47265625,
+     "mean_gap": 0.8873046557419002,
+     "log_z": 52.6956901550293
+    },
+    {
+     "iteration": 2617,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.720863342285156,
+     "batch_hit_rate": 0.458984375,
+     "mean_gap": 0.9037109389901161,
+     "log_z": 52.966697692871094
+    },
+    {
+     "iteration": 2618,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.314725637435913,
+     "batch_hit_rate": 0.49609375,
+     "mean_gap": 0.7593749882653356,
+     "log_z": 52.13964080810547
+    },
+    {
+     "iteration": 2619,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.208995819091797,
+     "batch_hit_rate": 0.494140625,
+     "mean_gap": 0.7882812805473804,
+     "log_z": 50.35851287841797
+    },
+    {
+     "iteration": 2620,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.025873184204102,
+     "batch_hit_rate": 0.525390625,
+     "mean_gap": 0.7351562539115548,
+     "log_z": 50.29237365722656
+    },
+    {
+     "iteration": 2621,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.551170349121094,
+     "batch_hit_rate": 0.466796875,
+     "mean_gap": 0.8488281313329935,
+     "log_z": 51.170692443847656
+    },
+    {
+     "iteration": 2622,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.566427230834961,
+     "batch_hit_rate": 0.455078125,
+     "mean_gap": 0.8566405852325261,
+     "log_z": 52.838706970214844
+    },
+    {
+     "iteration": 2623,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.863978385925293,
+     "batch_hit_rate": 0.470703125,
+     "mean_gap": 0.7695312667638063,
+     "log_z": 53.10880661010742
+    },
+    {
+     "iteration": 2624,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.235137939453125,
+     "batch_hit_rate": 0.49609375,
+     "mean_gap": 0.9037109417840838,
+     "log_z": 51.88999557495117
+    },
+    {
+     "iteration": 2625,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 8.49453067779541,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.7917968494875822,
+     "log_z": 49.53467559814453
+    },
+    {
+     "iteration": 2626,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.473079681396484,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.9048828152008355,
+     "log_z": 50.438720703125
+    },
+    {
+     "iteration": 2627,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 13.552827835083008,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.8839843794703484,
+     "log_z": 54.829368591308594
+    },
+    {
+     "iteration": 2628,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 7.500470161437988,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.8361328281462193,
+     "log_z": 53.635318756103516
+    },
+    {
+     "iteration": 2629,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.236542701721191,
+     "batch_hit_rate": 0.4765625,
+     "mean_gap": 0.8554687397554517,
+     "log_z": 50.99042510986328
+    },
+    {
+     "iteration": 2630,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.355698585510254,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.8951171487569809,
+     "log_z": 50.99845504760742
+    },
+    {
+     "iteration": 2631,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.8696398735046387,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.8654296817258,
+     "log_z": 52.27605438232422
+    },
+    {
+     "iteration": 2632,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.242622375488281,
+     "batch_hit_rate": 0.4921875,
+     "mean_gap": 0.8279296699911356,
+     "log_z": 52.0417594909668
+    },
+    {
+     "iteration": 2633,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.13523006439209,
+     "batch_hit_rate": 0.486328125,
+     "mean_gap": 0.896874993108213,
+     "log_z": 50.75598907470703
+    },
+    {
+     "iteration": 2634,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.062743186950684,
+     "batch_hit_rate": 0.509765625,
+     "mean_gap": 0.8146484293974936,
+     "log_z": 50.828712463378906
+    },
+    {
+     "iteration": 2635,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.415421485900879,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.8523437669500709,
+     "log_z": 52.0467529296875
+    },
+    {
+     "iteration": 2636,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.66798734664917,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.8269531400874257,
+     "log_z": 52.10404586791992
+    },
+    {
+     "iteration": 2637,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.02291202545166,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.8751953234896064,
+     "log_z": 51.183170318603516
+    },
+    {
+     "iteration": 2638,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.1937971115112305,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.7691406186204404,
+     "log_z": 51.539154052734375
+    },
+    {
+     "iteration": 2639,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.086016654968262,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.8947265837341547,
+     "log_z": 52.99046325683594
+    },
+    {
+     "iteration": 2640,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.413654804229736,
+     "batch_hit_rate": 0.435546875,
+     "mean_gap": 0.9978515570983291,
+     "log_z": 52.5887565612793
+    },
+    {
+     "iteration": 2641,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.31719446182251,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.8371093599125743,
+     "log_z": 51.151817321777344
+    },
+    {
+     "iteration": 2642,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.415060997009277,
+     "batch_hit_rate": 0.458984375,
+     "mean_gap": 0.9550781473517418,
+     "log_z": 51.12750244140625
+    },
+    {
+     "iteration": 2643,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.258084297180176,
+     "batch_hit_rate": 0.462890625,
+     "mean_gap": 0.868749993853271,
+     "log_z": 51.970436096191406
+    },
+    {
+     "iteration": 2644,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.526967763900757,
+     "batch_hit_rate": 0.5234375,
+     "mean_gap": 0.7320312270894647,
+     "log_z": 52.01022720336914
+    },
+    {
+     "iteration": 2645,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.023858070373535,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.7228515725582838,
+     "log_z": 51.47224426269531
+    },
+    {
+     "iteration": 2646,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7304115295410156,
+     "batch_hit_rate": 0.5234375,
+     "mean_gap": 0.7820312823168933,
+     "log_z": 51.72953796386719
+    },
+    {
+     "iteration": 2647,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.006298065185547,
+     "batch_hit_rate": 0.40234375,
+     "mean_gap": 0.982031256891787,
+     "log_z": 52.39512634277344
+    },
+    {
+     "iteration": 2648,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.352529525756836,
+     "batch_hit_rate": 0.447265625,
+     "mean_gap": 1.0455078016966581,
+     "log_z": 52.092994689941406
+    },
+    {
+     "iteration": 2649,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.495595455169678,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.7580078104510903,
+     "log_z": 51.10845184326172
+    },
+    {
+     "iteration": 2650,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.676672458648682,
+     "batch_hit_rate": 0.44921875,
+     "mean_gap": 0.936914081685245,
+     "log_z": 51.09952163696289
+    },
+    {
+     "iteration": 2651,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.5369486808776855,
+     "batch_hit_rate": 0.470703125,
+     "mean_gap": 0.8033203277736902,
+     "log_z": 51.88087844848633
+    },
+    {
+     "iteration": 2652,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 2.9609475135803223,
+     "batch_hit_rate": 0.537109375,
+     "mean_gap": 0.7078124992549419,
+     "log_z": 52.381378173828125
+    },
+    {
+     "iteration": 2653,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.012834548950195,
+     "batch_hit_rate": 0.435546875,
+     "mean_gap": 0.9640625193715096,
+     "log_z": 52.037384033203125
+    },
+    {
+     "iteration": 2654,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.404930114746094,
+     "batch_hit_rate": 0.44921875,
+     "mean_gap": 0.9695312296971679,
+     "log_z": 51.03424835205078
+    },
+    {
+     "iteration": 2655,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.320666313171387,
+     "batch_hit_rate": 0.47265625,
+     "mean_gap": 0.8158203596249223,
+     "log_z": 51.225868225097656
+    },
+    {
+     "iteration": 2656,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.8623688220977783,
+     "batch_hit_rate": 0.46484375,
+     "mean_gap": 0.8289062390103936,
+     "log_z": 52.48939895629883
+    },
+    {
+     "iteration": 2657,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.213540077209473,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.9384765629656613,
+     "log_z": 52.29460144042969
+    },
+    {
+     "iteration": 2658,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.8577680587768555,
+     "batch_hit_rate": 0.462890625,
+     "mean_gap": 0.9347655959427357,
+     "log_z": 51.17858123779297
+    },
+    {
+     "iteration": 2659,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.453433990478516,
+     "batch_hit_rate": 0.462890625,
+     "mean_gap": 0.8996093645691872,
+     "log_z": 51.07916259765625
+    },
+    {
+     "iteration": 2660,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.69788122177124,
+     "batch_hit_rate": 0.4375,
+     "mean_gap": 0.9261718532070518,
+     "log_z": 51.846351623535156
+    },
+    {
+     "iteration": 2661,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 2.866696834564209,
+     "batch_hit_rate": 0.447265625,
+     "mean_gap": 0.7712890598922968,
+     "log_z": 52.066871643066406
+    },
+    {
+     "iteration": 2662,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.9268298149108887,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.8333984455093741,
+     "log_z": 51.708641052246094
+    },
+    {
+     "iteration": 2663,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.0856614112854,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.885742197278887,
+     "log_z": 51.55015182495117
+    },
+    {
+     "iteration": 2664,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.314690113067627,
+     "batch_hit_rate": 0.435546875,
+     "mean_gap": 0.9783203145489097,
+     "log_z": 51.94782257080078
+    },
+    {
+     "iteration": 2665,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.550358772277832,
+     "batch_hit_rate": 0.4609375,
+     "mean_gap": 1.0177734643220901,
+     "log_z": 51.708770751953125
+    },
+    {
+     "iteration": 2666,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7969954013824463,
+     "batch_hit_rate": 0.521484375,
+     "mean_gap": 0.7771484730765224,
+     "log_z": 51.130943298339844
+    },
+    {
+     "iteration": 2667,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.516355514526367,
+     "batch_hit_rate": 0.517578125,
+     "mean_gap": 0.7287109149619937,
+     "log_z": 51.36759948730469
+    },
+    {
+     "iteration": 2668,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.5504074096679688,
+     "batch_hit_rate": 0.517578125,
+     "mean_gap": 0.7009765510447323,
+     "log_z": 52.20774841308594
+    },
+    {
+     "iteration": 2669,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.445688247680664,
+     "batch_hit_rate": 0.52734375,
+     "mean_gap": 0.6554687470197678,
+     "log_z": 52.189273834228516
+    },
+    {
+     "iteration": 2670,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.541495323181152,
+     "batch_hit_rate": 0.51171875,
+     "mean_gap": 0.799023428466171,
+     "log_z": 51.52339553833008
+    },
+    {
+     "iteration": 2671,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.880233287811279,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.8847656371071935,
+     "log_z": 51.17363739013672
+    },
+    {
+     "iteration": 2672,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.260375022888184,
+     "batch_hit_rate": 0.435546875,
+     "mean_gap": 0.8513671932742,
+     "log_z": 51.52444076538086
+    },
+    {
+     "iteration": 2673,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.375755310058594,
+     "batch_hit_rate": 0.431640625,
+     "mean_gap": 1.1589843556284904,
+     "log_z": 52.30096435546875
+    },
+    {
+     "iteration": 2674,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.02056360244751,
+     "batch_hit_rate": 0.419921875,
+     "mean_gap": 0.9267577713326318,
+     "log_z": 52.29301452636719
+    },
+    {
+     "iteration": 2675,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.071615695953369,
+     "batch_hit_rate": 0.439453125,
+     "mean_gap": 1.0369140426628292,
+     "log_z": 51.598453521728516
+    },
+    {
+     "iteration": 2676,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.520377159118652,
+     "batch_hit_rate": 0.458984375,
+     "mean_gap": 0.8998046728083864,
+     "log_z": 51.27975845336914
+    },
+    {
+     "iteration": 2677,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.404576778411865,
+     "batch_hit_rate": 0.466796875,
+     "mean_gap": 0.8072265759110451,
+     "log_z": 51.66034698486328
+    },
+    {
+     "iteration": 2678,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.628671884536743,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.7726562505122274,
+     "log_z": 52.29814529418945
+    },
+    {
+     "iteration": 2679,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.374405384063721,
+     "batch_hit_rate": 0.447265625,
+     "mean_gap": 0.8615234345197678,
+     "log_z": 52.21864318847656
+    },
+    {
+     "iteration": 2680,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.174371242523193,
+     "batch_hit_rate": 0.53125,
+     "mean_gap": 0.6957031255587935,
+     "log_z": 51.50772476196289
+    },
+    {
+     "iteration": 2681,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.6796674728393555,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.7855468499474227,
+     "log_z": 51.411521911621094
+    },
+    {
+     "iteration": 2682,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.002063274383545,
+     "batch_hit_rate": 0.498046875,
+     "mean_gap": 0.8033203240483999,
+     "log_z": 51.94581604003906
+    },
+    {
+     "iteration": 2683,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.195454120635986,
+     "batch_hit_rate": 0.45703125,
+     "mean_gap": 0.9226562222465873,
+     "log_z": 51.9234504699707
+    },
+    {
+     "iteration": 2684,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.499855995178223,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.9097655974328518,
+     "log_z": 51.41117858886719
+    },
+    {
+     "iteration": 2685,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.781162738800049,
+     "batch_hit_rate": 0.4453125,
+     "mean_gap": 1.0208984268829226,
+     "log_z": 51.51866912841797
+    },
+    {
+     "iteration": 2686,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.79423189163208,
+     "batch_hit_rate": 0.501953125,
+     "mean_gap": 0.7580078039318323,
+     "log_z": 51.8216667175293
+    },
+    {
+     "iteration": 2687,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.008790969848633,
+     "batch_hit_rate": 0.4765625,
+     "mean_gap": 0.890234399586916,
+     "log_z": 52.010833740234375
+    },
+    {
+     "iteration": 2688,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.036940574645996,
+     "batch_hit_rate": 0.486328125,
+     "mean_gap": 0.8248046468943357,
+     "log_z": 51.616668701171875
+    },
+    {
+     "iteration": 2689,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.00551700592041,
+     "batch_hit_rate": 0.51171875,
+     "mean_gap": 0.8404296794906259,
+     "log_z": 51.32796096801758
+    },
+    {
+     "iteration": 2690,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.6241254806518555,
+     "batch_hit_rate": 0.5078125,
+     "mean_gap": 0.8246093690395355,
+     "log_z": 51.56485366821289
+    },
+    {
+     "iteration": 2691,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.402748107910156,
+     "batch_hit_rate": 0.494140625,
+     "mean_gap": 0.935742171946913,
+     "log_z": 51.98404312133789
+    },
+    {
+     "iteration": 2692,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.200662612915039,
+     "batch_hit_rate": 0.470703125,
+     "mean_gap": 0.8187499605119228,
+     "log_z": 51.84967803955078
+    },
+    {
+     "iteration": 2693,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.56337308883667,
+     "batch_hit_rate": 0.49609375,
+     "mean_gap": 0.930664075538516,
+     "log_z": 51.4063720703125
+    },
+    {
+     "iteration": 2694,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.9246034622192383,
+     "batch_hit_rate": 0.513671875,
+     "mean_gap": 0.8039062637835741,
+     "log_z": 51.50315475463867
+    },
+    {
+     "iteration": 2695,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.92270040512085,
+     "batch_hit_rate": 0.421875,
+     "mean_gap": 0.9681640618946403,
+     "log_z": 52.224266052246094
+    },
+    {
+     "iteration": 2696,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.142191410064697,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.7781250048428774,
+     "log_z": 52.183631896972656
+    },
+    {
+     "iteration": 2697,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7279701232910156,
+     "batch_hit_rate": 0.498046875,
+     "mean_gap": 0.8195312479510903,
+     "log_z": 51.518577575683594
+    },
+    {
+     "iteration": 2698,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.935068130493164,
+     "batch_hit_rate": 0.4609375,
+     "mean_gap": 1.0427734684199095,
+     "log_z": 51.4351692199707
+    },
+    {
+     "iteration": 2699,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.017201900482178,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.8373046647757292,
+     "log_z": 51.513301849365234
+    },
+    {
+     "iteration": 2700,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7106261253356934,
+     "batch_hit_rate": 0.501953125,
+     "mean_gap": 0.7472656248137355,
+     "log_z": 52.02511215209961
+    },
+    {
+     "iteration": 2701,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.852260589599609,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.9367187418974936,
+     "log_z": 52.12165451049805
+    },
+    {
+     "iteration": 2702,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.658560752868652,
+     "batch_hit_rate": 0.435546875,
+     "mean_gap": 0.9220702876336873,
+     "log_z": 51.59939193725586
+    },
+    {
+     "iteration": 2703,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.979043960571289,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.8597656367346644,
+     "log_z": 51.34418869018555
+    },
+    {
+     "iteration": 2704,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.584747314453125,
+     "batch_hit_rate": 0.4453125,
+     "mean_gap": 0.9296875027939677,
+     "log_z": 51.71134948730469
+    },
+    {
+     "iteration": 2705,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.9686713218688965,
+     "batch_hit_rate": 0.423828125,
+     "mean_gap": 0.9804687658324838,
+     "log_z": 51.87779998779297
+    },
+    {
+     "iteration": 2706,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.447219133377075,
+     "batch_hit_rate": 0.505859375,
+     "mean_gap": 0.7794921966269612,
+     "log_z": 51.47675704956055
+    },
+    {
+     "iteration": 2707,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.457947254180908,
+     "batch_hit_rate": 0.501953125,
+     "mean_gap": 0.7748047057539225,
+     "log_z": 51.67333984375
+    },
+    {
+     "iteration": 2708,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.1147689819335938,
+     "batch_hit_rate": 0.4921875,
+     "mean_gap": 0.7951171710155904,
+     "log_z": 51.96162414550781
+    },
+    {
+     "iteration": 2709,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.011127471923828,
+     "batch_hit_rate": 0.47265625,
+     "mean_gap": 0.9339843709021807,
+     "log_z": 51.838348388671875
+    },
+    {
+     "iteration": 2710,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.024587154388428,
+     "batch_hit_rate": 0.447265625,
+     "mean_gap": 0.916406225413084,
+     "log_z": 51.32484436035156
+    },
+    {
+     "iteration": 2711,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.459068298339844,
+     "batch_hit_rate": 0.466796875,
+     "mean_gap": 0.8671875121071935,
+     "log_z": 51.50479507446289
+    },
+    {
+     "iteration": 2712,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.1246442794799805,
+     "batch_hit_rate": 0.4609375,
+     "mean_gap": 0.9416015949100256,
+     "log_z": 52.24913024902344
+    },
+    {
+     "iteration": 2713,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.495294570922852,
+     "batch_hit_rate": 0.40625,
+     "mean_gap": 1.0031250352039933,
+     "log_z": 52.264930725097656
+    },
+    {
+     "iteration": 2714,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.478172302246094,
+     "batch_hit_rate": 0.447265625,
+     "mean_gap": 0.9222656404599547,
+     "log_z": 51.584686279296875
+    },
+    {
+     "iteration": 2715,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.589535236358643,
+     "batch_hit_rate": 0.4765625,
+     "mean_gap": 0.8041015574708581,
+     "log_z": 51.098636627197266
+    },
+    {
+     "iteration": 2716,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.652290105819702,
+     "batch_hit_rate": 0.498046875,
+     "mean_gap": 0.7722656223922968,
+     "log_z": 51.34339904785156
+    },
+    {
+     "iteration": 2717,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.244025230407715,
+     "batch_hit_rate": 0.4765625,
+     "mean_gap": 0.9025390325114131,
+     "log_z": 52.16891860961914
+    },
+    {
+     "iteration": 2718,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.138175010681152,
+     "batch_hit_rate": 0.5078125,
+     "mean_gap": 0.8228515954688191,
+     "log_z": 52.2591552734375
+    },
+    {
+     "iteration": 2719,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.402350902557373,
+     "batch_hit_rate": 0.509765625,
+     "mean_gap": 0.8066406287252903,
+     "log_z": 51.735538482666016
+    },
+    {
+     "iteration": 2720,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.97243595123291,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.8302734615281224,
+     "log_z": 51.19356155395508
+    },
+    {
+     "iteration": 2721,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7234649658203125,
+     "batch_hit_rate": 0.486328125,
+     "mean_gap": 0.8064453182742,
+     "log_z": 51.360294342041016
+    },
+    {
+     "iteration": 2722,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.868000030517578,
+     "batch_hit_rate": 0.423828125,
+     "mean_gap": 1.0773437460884452,
+     "log_z": 52.16767883300781
+    },
+    {
+     "iteration": 2723,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.391270160675049,
+     "batch_hit_rate": 0.431640625,
+     "mean_gap": 0.9763671662658453,
+     "log_z": 52.25202560424805
+    },
+    {
+     "iteration": 2724,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.146564960479736,
+     "batch_hit_rate": 0.505859375,
+     "mean_gap": 0.8916015569120646,
+     "log_z": 51.672264099121094
+    },
+    {
+     "iteration": 2725,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.364881992340088,
+     "batch_hit_rate": 0.486328125,
+     "mean_gap": 0.880859381519258,
+     "log_z": 51.2415771484375
+    },
+    {
+     "iteration": 2726,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.858613967895508,
+     "batch_hit_rate": 0.45703125,
+     "mean_gap": 0.8041015341877937,
+     "log_z": 51.37503433227539
+    },
+    {
+     "iteration": 2727,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.117405891418457,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.7960937200114131,
+     "log_z": 52.10803985595703
+    },
+    {
+     "iteration": 2728,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.220364570617676,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.8578125182539225,
+     "log_z": 52.185787200927734
+    },
+    {
+     "iteration": 2729,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.040249824523926,
+     "batch_hit_rate": 0.451171875,
+     "mean_gap": 0.9191406453028321,
+     "log_z": 51.67070007324219
+    },
+    {
+     "iteration": 2730,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.195439338684082,
+     "batch_hit_rate": 0.5,
+     "mean_gap": 0.7402343885041773,
+     "log_z": 51.180763244628906
+    },
+    {
+     "iteration": 2731,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.4172210693359375,
+     "batch_hit_rate": 0.47265625,
+     "mean_gap": 1.0025390814989805,
+     "log_z": 51.404052734375
+    },
+    {
+     "iteration": 2732,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.030318737030029,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.865820312872529,
+     "log_z": 51.759063720703125
+    },
+    {
+     "iteration": 2733,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.821799278259277,
+     "batch_hit_rate": 0.47265625,
+     "mean_gap": 0.887304712086916,
+     "log_z": 52.01617431640625
+    },
+    {
+     "iteration": 2734,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.364743709564209,
+     "batch_hit_rate": 0.49609375,
+     "mean_gap": 0.8505859477445483,
+     "log_z": 51.714481353759766
+    },
+    {
+     "iteration": 2735,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.741515159606934,
+     "batch_hit_rate": 0.501953125,
+     "mean_gap": 0.8794921971857548,
+     "log_z": 51.538639068603516
+    },
+    {
+     "iteration": 2736,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7292439937591553,
+     "batch_hit_rate": 0.474609375,
+     "mean_gap": 0.8306640675291419,
+     "log_z": 51.57862854003906
+    },
+    {
+     "iteration": 2737,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.97513484954834,
+     "batch_hit_rate": 0.5234375,
+     "mean_gap": 0.9222656236961484,
+     "log_z": 52.02267837524414
+    },
+    {
+     "iteration": 2738,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.687135696411133,
+     "batch_hit_rate": 0.47265625,
+     "mean_gap": 0.8964843852445483,
+     "log_z": 51.89051055908203
+    },
+    {
+     "iteration": 2739,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.416094779968262,
+     "batch_hit_rate": 0.4765625,
+     "mean_gap": 0.9023437583819032,
+     "log_z": 51.265586853027344
+    },
+    {
+     "iteration": 2740,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.054285764694214,
+     "batch_hit_rate": 0.513671875,
+     "mean_gap": 0.7619140483438969,
+     "log_z": 51.161495208740234
+    },
+    {
+     "iteration": 2741,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.134352207183838,
+     "batch_hit_rate": 0.455078125,
+     "mean_gap": 0.9085937687195837,
+     "log_z": 51.69798278808594
+    },
+    {
+     "iteration": 2742,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.759138107299805,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.9533203202299774,
+     "log_z": 51.96938705444336
+    },
+    {
+     "iteration": 2743,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7479605674743652,
+     "batch_hit_rate": 0.453125,
+     "mean_gap": 0.8554687406867743,
+     "log_z": 51.62013626098633
+    },
+    {
+     "iteration": 2744,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.062582969665527,
+     "batch_hit_rate": 0.443359375,
+     "mean_gap": 0.9414062490686774,
+     "log_z": 51.70210647583008
+    },
+    {
+     "iteration": 2745,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.37387228012085,
+     "batch_hit_rate": 0.4453125,
+     "mean_gap": 1.0283203138969839,
+     "log_z": 51.8258171081543
+    },
+    {
+     "iteration": 2746,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.3925676345825195,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.8615234019234776,
+     "log_z": 51.56003952026367
+    },
+    {
+     "iteration": 2747,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7576406002044678,
+     "batch_hit_rate": 0.515625,
+     "mean_gap": 0.7025390481576324,
+     "log_z": 51.70988464355469
+    },
+    {
+     "iteration": 2748,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.819838523864746,
+     "batch_hit_rate": 0.513671875,
+     "mean_gap": 0.8144531100988388,
+     "log_z": 51.80432891845703
+    },
+    {
+     "iteration": 2749,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.658167362213135,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.8794922027736902,
+     "log_z": 51.60648727416992
+    },
+    {
+     "iteration": 2750,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.579969882965088,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.7917968793772161,
+     "log_z": 51.56193923950195
+    },
+    {
+     "iteration": 2751,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.013714790344238,
+     "batch_hit_rate": 0.462890625,
+     "mean_gap": 0.9554687235504389,
+     "log_z": 51.8571891784668
+    },
+    {
+     "iteration": 2752,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.5422987937927246,
+     "batch_hit_rate": 0.525390625,
+     "mean_gap": 0.7941406522877514,
+     "log_z": 51.60127639770508
+    },
+    {
+     "iteration": 2753,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 2.8109521865844727,
+     "batch_hit_rate": 0.51171875,
+     "mean_gap": 0.7624999769032001,
+     "log_z": 51.67893981933594
+    },
+    {
+     "iteration": 2754,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.877490758895874,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.8158203004859388,
+     "log_z": 51.93441390991211
+    },
+    {
+     "iteration": 2755,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.977485656738281,
+     "batch_hit_rate": 0.439453125,
+     "mean_gap": 0.9484375077299774,
+     "log_z": 51.77108383178711
+    },
+    {
+     "iteration": 2756,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.105391502380371,
+     "batch_hit_rate": 0.517578125,
+     "mean_gap": 0.9261718634516001,
+     "log_z": 51.32359313964844
+    },
+    {
+     "iteration": 2757,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.834133148193359,
+     "batch_hit_rate": 0.44921875,
+     "mean_gap": 0.9943359256722033,
+     "log_z": 51.403995513916016
+    },
+    {
+     "iteration": 2758,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.400773048400879,
+     "batch_hit_rate": 0.486328125,
+     "mean_gap": 0.7648437400348485,
+     "log_z": 51.818206787109375
+    },
+    {
+     "iteration": 2759,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.595438480377197,
+     "batch_hit_rate": 0.51953125,
+     "mean_gap": 0.8626953419297934,
+     "log_z": 52.0106201171875
+    },
+    {
+     "iteration": 2760,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.075307369232178,
+     "batch_hit_rate": 0.423828125,
+     "mean_gap": 0.9542968580499291,
+     "log_z": 51.59244155883789
+    },
+    {
+     "iteration": 2761,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.778226852416992,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.8492187401279807,
+     "log_z": 51.45192337036133
+    },
+    {
+     "iteration": 2762,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.106125831604004,
+     "batch_hit_rate": 0.458984375,
+     "mean_gap": 0.9269531099125743,
+     "log_z": 51.98414611816406
+    },
+    {
+     "iteration": 2763,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.04183292388916,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.8687499705702066,
+     "log_z": 51.88678741455078
+    },
+    {
+     "iteration": 2764,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.2329630851745605,
+     "batch_hit_rate": 0.42578125,
+     "mean_gap": 1.0037109130062163,
+     "log_z": 51.60847473144531
+    },
+    {
+     "iteration": 2765,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.813659906387329,
+     "batch_hit_rate": 0.505859375,
+     "mean_gap": 0.7169922012835741,
+     "log_z": 51.54261779785156
+    },
+    {
+     "iteration": 2766,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.100929260253906,
+     "batch_hit_rate": 0.44140625,
+     "mean_gap": 0.9173828298225999,
+     "log_z": 52.12968444824219
+    },
+    {
+     "iteration": 2767,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 2.9932925701141357,
+     "batch_hit_rate": 0.51953125,
+     "mean_gap": 0.6677734488621354,
+     "log_z": 52.05194854736328
+    },
+    {
+     "iteration": 2768,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.343351364135742,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.840624968521297,
+     "log_z": 51.538028717041016
+    },
+    {
+     "iteration": 2769,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.1290435791015625,
+     "batch_hit_rate": 0.46484375,
+     "mean_gap": 0.9261719044297934,
+     "log_z": 51.29379653930664
+    },
+    {
+     "iteration": 2770,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.346096992492676,
+     "batch_hit_rate": 0.447265625,
+     "mean_gap": 0.9312499882653356,
+     "log_z": 51.701072692871094
+    },
+    {
+     "iteration": 2771,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.245195388793945,
+     "batch_hit_rate": 0.474609375,
+     "mean_gap": 0.9835937358438969,
+     "log_z": 51.85246658325195
+    },
+    {
+     "iteration": 2772,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.074227333068848,
+     "batch_hit_rate": 0.53515625,
+     "mean_gap": 0.7769531328231096,
+     "log_z": 51.56321716308594
+    },
+    {
+     "iteration": 2773,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.18828010559082,
+     "batch_hit_rate": 0.453125,
+     "mean_gap": 0.8775390749797225,
+     "log_z": 51.66218566894531
+    },
+    {
+     "iteration": 2774,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.105066299438477,
+     "batch_hit_rate": 0.466796875,
+     "mean_gap": 0.9365234193392098,
+     "log_z": 52.08973693847656
+    },
+    {
+     "iteration": 2775,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.755936622619629,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.7863281071186066,
+     "log_z": 51.83678436279297
+    },
+    {
+     "iteration": 2776,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.427778244018555,
+     "batch_hit_rate": 0.474609375,
+     "mean_gap": 0.8166015688329935,
+     "log_z": 51.43655776977539
+    },
+    {
+     "iteration": 2777,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.553351402282715,
+     "batch_hit_rate": 0.458984375,
+     "mean_gap": 0.9207031251862645,
+     "log_z": 51.59475326538086
+    },
+    {
+     "iteration": 2778,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.1888043880462646,
+     "batch_hit_rate": 0.515625,
+     "mean_gap": 0.7015625154599547,
+     "log_z": 51.71614074707031
+    },
+    {
+     "iteration": 2779,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.685371160507202,
+     "batch_hit_rate": 0.470703125,
+     "mean_gap": 0.8052734406664968,
+     "log_z": 52.1945915222168
+    },
+    {
+     "iteration": 2780,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.624610900878906,
+     "batch_hit_rate": 0.4296875,
+     "mean_gap": 0.981640606187284,
+     "log_z": 51.983943939208984
+    },
+    {
+     "iteration": 2781,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.463490962982178,
+     "batch_hit_rate": 0.44921875,
+     "mean_gap": 0.9193359101191163,
+     "log_z": 51.18572998046875
+    },
+    {
+     "iteration": 2782,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.913698196411133,
+     "batch_hit_rate": 0.431640625,
+     "mean_gap": 1.027734356932342,
+     "log_z": 51.15480041503906
+    },
+    {
+     "iteration": 2783,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.865638256072998,
+     "batch_hit_rate": 0.4609375,
+     "mean_gap": 0.9564453074708581,
+     "log_z": 51.73789596557617
+    },
+    {
+     "iteration": 2784,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.4607300758361816,
+     "batch_hit_rate": 0.525390625,
+     "mean_gap": 0.7904296945780516,
+     "log_z": 52.013694763183594
+    },
+    {
+     "iteration": 2785,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.4731087684631348,
+     "batch_hit_rate": 0.498046875,
+     "mean_gap": 0.7714843852445483,
+     "log_z": 51.79386520385742
+    },
+    {
+     "iteration": 2786,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.9819235801696777,
+     "batch_hit_rate": 0.525390625,
+     "mean_gap": 0.7658203197643161,
+     "log_z": 51.501834869384766
+    },
+    {
+     "iteration": 2787,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.4071836471557617,
+     "batch_hit_rate": 0.548828125,
+     "mean_gap": 0.7234374908730388,
+     "log_z": 51.679466247558594
+    },
+    {
+     "iteration": 2788,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.4704811573028564,
+     "batch_hit_rate": 0.517578125,
+     "mean_gap": 0.7619140474125743,
+     "log_z": 52.04206085205078
+    },
+    {
+     "iteration": 2789,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.860568046569824,
+     "batch_hit_rate": 0.453125,
+     "mean_gap": 0.9251953000202775,
+     "log_z": 51.86618423461914
+    },
+    {
+     "iteration": 2790,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.402589797973633,
+     "batch_hit_rate": 0.45703125,
+     "mean_gap": 0.9138671648688614,
+     "log_z": 51.249732971191406
+    },
+    {
+     "iteration": 2791,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.815639972686768,
+     "batch_hit_rate": 0.427734375,
+     "mean_gap": 1.0222655907273293,
+     "log_z": 51.37196350097656
+    },
+    {
+     "iteration": 2792,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.060089111328125,
+     "batch_hit_rate": 0.419921875,
+     "mean_gap": 1.0035156160593033,
+     "log_z": 51.902252197265625
+    },
+    {
+     "iteration": 2793,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.885465621948242,
+     "batch_hit_rate": 0.49609375,
+     "mean_gap": 0.8220703015103936,
+     "log_z": 51.97332000732422
+    },
+    {
+     "iteration": 2794,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.259417533874512,
+     "batch_hit_rate": 0.4609375,
+     "mean_gap": 0.9298828155733645,
+     "log_z": 51.560665130615234
+    },
+    {
+     "iteration": 2795,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.461739540100098,
+     "batch_hit_rate": 0.474609375,
+     "mean_gap": 0.8681640736758709,
+     "log_z": 51.30327606201172
+    },
+    {
+     "iteration": 2796,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.571905136108398,
+     "batch_hit_rate": 0.51953125,
+     "mean_gap": 0.8062500106170774,
+     "log_z": 51.615631103515625
+    },
+    {
+     "iteration": 2797,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.6058733463287354,
+     "batch_hit_rate": 0.494140625,
+     "mean_gap": 0.7999999588355422,
+     "log_z": 51.88500213623047
+    },
+    {
+     "iteration": 2798,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.407484292984009,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.7783203143626451,
+     "log_z": 51.836936950683594
+    },
+    {
+     "iteration": 2799,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.904830455780029,
+     "batch_hit_rate": 0.455078125,
+     "mean_gap": 0.9896484529599547,
+     "log_z": 51.95301055908203
+    },
+    {
+     "iteration": 2800,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.5093278884887695,
+     "batch_hit_rate": 0.470703125,
+     "mean_gap": 1.0755859334021807,
+     "log_z": 51.54045867919922
+    },
+    {
+     "iteration": 2801,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.325490951538086,
+     "batch_hit_rate": 0.412109375,
+     "mean_gap": 1.1394531102851033,
+     "log_z": 51.14891815185547
+    },
+    {
+     "iteration": 2802,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.309798240661621,
+     "batch_hit_rate": 0.455078125,
+     "mean_gap": 0.8679687408730388,
+     "log_z": 51.328834533691406
+    },
+    {
+     "iteration": 2803,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.208198547363281,
+     "batch_hit_rate": 0.462890625,
+     "mean_gap": 0.9330078512430191,
+     "log_z": 52.09381866455078
+    },
+    {
+     "iteration": 2804,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.9076056480407715,
+     "batch_hit_rate": 0.521484375,
+     "mean_gap": 0.7781249824911356,
+     "log_z": 52.108985900878906
+    },
+    {
+     "iteration": 2805,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.79378342628479,
+     "batch_hit_rate": 0.44140625,
+     "mean_gap": 0.8046874897554517,
+     "log_z": 51.50032043457031
+    },
+    {
+     "iteration": 2806,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.670095443725586,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.9527343679219484,
+     "log_z": 51.492401123046875
+    },
+    {
+     "iteration": 2807,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.124490737915039,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.905273447278887,
+     "log_z": 51.75399398803711
+    },
+    {
+     "iteration": 2808,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.386991024017334,
+     "batch_hit_rate": 0.5,
+     "mean_gap": 0.7773437406867743,
+     "log_z": 51.67741012573242
+    },
+    {
+     "iteration": 2809,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.405790328979492,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.7693359265103936,
+     "log_z": 51.741188049316406
+    },
+    {
+     "iteration": 2810,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.4822866916656494,
+     "batch_hit_rate": 0.4765625,
+     "mean_gap": 0.7929687348660082,
+     "log_z": 51.94175720214844
+    },
+    {
+     "iteration": 2811,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.027571678161621,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.9226562511175871,
+     "log_z": 51.6780891418457
+    },
+    {
+     "iteration": 2812,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.4865498542785645,
+     "batch_hit_rate": 0.43359375,
+     "mean_gap": 1.0080078067258,
+     "log_z": 51.475730895996094
+    },
+    {
+     "iteration": 2813,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.78359055519104,
+     "batch_hit_rate": 0.4609375,
+     "mean_gap": 0.879882762208581,
+     "log_z": 51.672630310058594
+    },
+    {
+     "iteration": 2814,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.240206718444824,
+     "batch_hit_rate": 0.50390625,
+     "mean_gap": 0.8091796494991286,
+     "log_z": 51.88780212402344
+    },
+    {
+     "iteration": 2815,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.3296642303466797,
+     "batch_hit_rate": 0.505859375,
+     "mean_gap": 0.8166015651077032,
+     "log_z": 51.57560348510742
+    },
+    {
+     "iteration": 2816,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.728436231613159,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.8246093867346644,
+     "log_z": 51.93328094482422
+    },
+    {
+     "iteration": 2817,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.9384536743164062,
+     "batch_hit_rate": 0.44140625,
+     "mean_gap": 0.9281250261701643,
+     "log_z": 51.66144561767578
+    },
+    {
+     "iteration": 2818,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.719804763793945,
+     "batch_hit_rate": 0.447265625,
+     "mean_gap": 0.9689452927559614,
+     "log_z": 51.67366409301758
+    },
+    {
+     "iteration": 2819,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.6129255294799805,
+     "batch_hit_rate": 0.462890625,
+     "mean_gap": 0.8837890850845724,
+     "log_z": 51.72734069824219
+    },
+    {
+     "iteration": 2820,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.0454840660095215,
+     "batch_hit_rate": 0.458984375,
+     "mean_gap": 0.9152343813329935,
+     "log_z": 51.67308807373047
+    },
+    {
+     "iteration": 2821,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.556509017944336,
+     "batch_hit_rate": 0.537109375,
+     "mean_gap": 0.756640613079071,
+     "log_z": 51.54117202758789
+    },
+    {
+     "iteration": 2822,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.600431442260742,
+     "batch_hit_rate": 0.544921875,
+     "mean_gap": 0.7941406327299774,
+     "log_z": 51.803897857666016
+    },
+    {
+     "iteration": 2823,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.676187515258789,
+     "batch_hit_rate": 0.52734375,
+     "mean_gap": 0.7355468701571226,
+     "log_z": 51.37081527709961
+    },
+    {
+     "iteration": 2824,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.132840156555176,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.8828124883584678,
+     "log_z": 51.69403839111328
+    },
+    {
+     "iteration": 2825,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.825380563735962,
+     "batch_hit_rate": 0.548828125,
+     "mean_gap": 0.7164062228985131,
+     "log_z": 51.64865493774414
+    },
+    {
+     "iteration": 2826,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.5138297080993652,
+     "batch_hit_rate": 0.49609375,
+     "mean_gap": 0.7697265865281224,
+     "log_z": 51.81144714355469
+    },
+    {
+     "iteration": 2827,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.140253067016602,
+     "batch_hit_rate": 0.45703125,
+     "mean_gap": 1.001367159653455,
+     "log_z": 52.24798583984375
+    },
+    {
+     "iteration": 2828,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.420566082000732,
+     "batch_hit_rate": 0.4609375,
+     "mean_gap": 0.8755859332159162,
+     "log_z": 51.87326431274414
+    },
+    {
+     "iteration": 2829,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.082369804382324,
+     "batch_hit_rate": 0.44921875,
+     "mean_gap": 0.9576172074303031,
+     "log_z": 51.27714538574219
+    },
+    {
+     "iteration": 2830,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.2212934494018555,
+     "batch_hit_rate": 0.419921875,
+     "mean_gap": 1.0273437579162419,
+     "log_z": 51.439205169677734
+    },
+    {
+     "iteration": 2831,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.516542434692383,
+     "batch_hit_rate": 0.443359375,
+     "mean_gap": 0.9189453325234354,
+     "log_z": 52.10733413696289
+    },
+    {
+     "iteration": 2832,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.396599769592285,
+     "batch_hit_rate": 0.50390625,
+     "mean_gap": 0.7687499891035259,
+     "log_z": 52.00690460205078
+    },
+    {
+     "iteration": 2833,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.507270336151123,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.7615234372206032,
+     "log_z": 51.420555114746094
+    },
+    {
+     "iteration": 2834,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.1212310791015625,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.7673828108236194,
+     "log_z": 51.536781311035156
+    },
+    {
+     "iteration": 2835,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.871918201446533,
+     "batch_hit_rate": 0.5078125,
+     "mean_gap": 0.7919922033324838,
+     "log_z": 52.10295104980469
+    },
+    {
+     "iteration": 2836,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.0152387619018555,
+     "batch_hit_rate": 0.451171875,
+     "mean_gap": 0.8246093792840838,
+     "log_z": 51.976165771484375
+    },
+    {
+     "iteration": 2837,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.017199516296387,
+     "batch_hit_rate": 0.5,
+     "mean_gap": 0.8875000132247806,
+     "log_z": 51.25530242919922
+    },
+    {
+     "iteration": 2838,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.115104675292969,
+     "batch_hit_rate": 0.45703125,
+     "mean_gap": 0.9244140833616257,
+     "log_z": 51.29632568359375
+    },
+    {
+     "iteration": 2839,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.174767017364502,
+     "batch_hit_rate": 0.51171875,
+     "mean_gap": 0.6990234041586518,
+     "log_z": 51.777122497558594
+    },
+    {
+     "iteration": 2840,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.3204145431518555,
+     "batch_hit_rate": 0.439453125,
+     "mean_gap": 0.916992218233645,
+     "log_z": 52.62604904174805
+    },
+    {
+     "iteration": 2841,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.200344085693359,
+     "batch_hit_rate": 0.46484375,
+     "mean_gap": 0.8480468629859388,
+     "log_z": 52.65540313720703
+    },
+    {
+     "iteration": 2842,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.477695465087891,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.9484375100582838,
+     "log_z": 51.96006774902344
+    },
+    {
+     "iteration": 2843,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.0187201499938965,
+     "batch_hit_rate": 0.470703125,
+     "mean_gap": 0.9374999881256372,
+     "log_z": 50.84929656982422
+    },
+    {
+     "iteration": 2844,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.357821464538574,
+     "batch_hit_rate": 0.40234375,
+     "mean_gap": 1.119921869598329,
+     "log_z": 50.61952590942383
+    },
+    {
+     "iteration": 2845,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.903757572174072,
+     "batch_hit_rate": 0.4296875,
+     "mean_gap": 0.9355468852445483,
+     "log_z": 51.16996383666992
+    },
+    {
+     "iteration": 2846,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.312609672546387,
+     "batch_hit_rate": 0.447265625,
+     "mean_gap": 0.8689452921971679,
+     "log_z": 52.411338806152344
+    },
+    {
+     "iteration": 2847,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.989358425140381,
+     "batch_hit_rate": 0.47265625,
+     "mean_gap": 0.952539037913084,
+     "log_z": 52.6972770690918
+    },
+    {
+     "iteration": 2848,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.223845958709717,
+     "batch_hit_rate": 0.498046875,
+     "mean_gap": 0.9429687401279807,
+     "log_z": 52.03118896484375
+    },
+    {
+     "iteration": 2849,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.032184600830078,
+     "batch_hit_rate": 0.498046875,
+     "mean_gap": 0.8251953236758709,
+     "log_z": 50.836097717285156
+    },
+    {
+     "iteration": 2850,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.898128509521484,
+     "batch_hit_rate": 0.50390625,
+     "mean_gap": 0.7789062475785613,
+     "log_z": 50.64628982543945
+    },
+    {
+     "iteration": 2851,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.216885566711426,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.7984374887309968,
+     "log_z": 51.36713790893555
+    },
+    {
+     "iteration": 2852,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.650778770446777,
+     "batch_hit_rate": 0.47265625,
+     "mean_gap": 0.8177734483033419,
+     "log_z": 52.712581634521484
+    },
+    {
+     "iteration": 2853,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.396042346954346,
+     "batch_hit_rate": 0.474609375,
+     "mean_gap": 0.8140625106170774,
+     "log_z": 53.055233001708984
+    },
+    {
+     "iteration": 2854,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.455148696899414,
+     "batch_hit_rate": 0.5,
+     "mean_gap": 0.832031263038516,
+     "log_z": 52.439903259277344
+    },
+    {
+     "iteration": 2855,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.732729911804199,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.933007831685245,
+     "log_z": 51.0223388671875
+    },
+    {
+     "iteration": 2856,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.709605693817139,
+     "batch_hit_rate": 0.4375,
+     "mean_gap": 0.8904297016561031,
+     "log_z": 50.630977630615234
+    },
+    {
+     "iteration": 2857,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.123618125915527,
+     "batch_hit_rate": 0.474609375,
+     "mean_gap": 0.8730468456633389,
+     "log_z": 51.34052658081055
+    },
+    {
+     "iteration": 2858,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.038444519042969,
+     "batch_hit_rate": 0.45703125,
+     "mean_gap": 0.8687499854713678,
+     "log_z": 52.760894775390625
+    },
+    {
+     "iteration": 2859,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.208367824554443,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.7787109492346644,
+     "log_z": 52.99877166748047
+    },
+    {
+     "iteration": 2860,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.332976818084717,
+     "batch_hit_rate": 0.505859375,
+     "mean_gap": 0.8839843980967999,
+     "log_z": 52.19962692260742
+    },
+    {
+     "iteration": 2861,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.740592002868652,
+     "batch_hit_rate": 0.45703125,
+     "mean_gap": 0.9259765762835741,
+     "log_z": 50.72874069213867
+    },
+    {
+     "iteration": 2862,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.883096218109131,
+     "batch_hit_rate": 0.47265625,
+     "mean_gap": 0.841015612706542,
+     "log_z": 50.36676788330078
+    },
+    {
+     "iteration": 2863,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.754939556121826,
+     "batch_hit_rate": 0.470703125,
+     "mean_gap": 0.8527343906462193,
+     "log_z": 51.08608627319336
+    },
+    {
+     "iteration": 2864,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.403965950012207,
+     "batch_hit_rate": 0.494140625,
+     "mean_gap": 0.816601593978703,
+     "log_z": 52.759498596191406
+    },
+    {
+     "iteration": 2865,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.745727062225342,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.828515618108213,
+     "log_z": 53.090736389160156
+    },
+    {
+     "iteration": 2866,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.735820770263672,
+     "batch_hit_rate": 0.443359375,
+     "mean_gap": 0.9478515749797225,
+     "log_z": 52.069095611572266
+    },
+    {
+     "iteration": 2867,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.372236728668213,
+     "batch_hit_rate": 0.4765625,
+     "mean_gap": 0.9296875302679837,
+     "log_z": 50.31713104248047
+    },
+    {
+     "iteration": 2868,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.255367279052734,
+     "batch_hit_rate": 0.46484375,
+     "mean_gap": 0.8390624979510903,
+     "log_z": 50.34883499145508
+    },
+    {
+     "iteration": 2869,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.0143115520477295,
+     "batch_hit_rate": 0.54296875,
+     "mean_gap": 0.7343750316649675,
+     "log_z": 51.84849548339844
+    },
+    {
+     "iteration": 2870,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.655888557434082,
+     "batch_hit_rate": 0.4765625,
+     "mean_gap": 0.7500000027939677,
+     "log_z": 53.4846076965332
+    },
+    {
+     "iteration": 2871,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.8549933433532715,
+     "batch_hit_rate": 0.474609375,
+     "mean_gap": 0.8216796666383743,
+     "log_z": 52.871891021728516
+    },
+    {
+     "iteration": 2872,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.477046489715576,
+     "batch_hit_rate": 0.52734375,
+     "mean_gap": 0.815234387293458,
+     "log_z": 51.17174530029297
+    },
+    {
+     "iteration": 2873,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.5860490798950195,
+     "batch_hit_rate": 0.4921875,
+     "mean_gap": 0.9482421823777258,
+     "log_z": 51.00945281982422
+    },
+    {
+     "iteration": 2874,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.620362281799316,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.7828124845400453,
+     "log_z": 52.19396209716797
+    },
+    {
+     "iteration": 2875,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.911006450653076,
+     "batch_hit_rate": 0.515625,
+     "mean_gap": 0.8222656170837581,
+     "log_z": 51.71175003051758
+    },
+    {
+     "iteration": 2876,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.218520641326904,
+     "batch_hit_rate": 0.501953125,
+     "mean_gap": 0.7892577853053808,
+     "log_z": 51.6899299621582
+    },
+    {
+     "iteration": 2877,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.341808795928955,
+     "batch_hit_rate": 0.48828125,
+     "mean_gap": 0.8447265753056854,
+     "log_z": 52.01133728027344
+    },
+    {
+     "iteration": 2878,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.155190944671631,
+     "batch_hit_rate": 0.4765625,
+     "mean_gap": 0.867187493480742,
+     "log_z": 51.538570404052734
+    },
+    {
+     "iteration": 2879,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.3511409759521484,
+     "batch_hit_rate": 0.501953125,
+     "mean_gap": 0.7181640509516001,
+     "log_z": 51.8384895324707
+    },
+    {
+     "iteration": 2880,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.684202194213867,
+     "batch_hit_rate": 0.51171875,
+     "mean_gap": 0.7691406393423676,
+     "log_z": 52.03501892089844
+    },
+    {
+     "iteration": 2881,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.508175849914551,
+     "batch_hit_rate": 0.5,
+     "mean_gap": 0.7865234222263098,
+     "log_z": 51.44248962402344
+    },
+    {
+     "iteration": 2882,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.751415252685547,
+     "batch_hit_rate": 0.462890625,
+     "mean_gap": 0.7945312522351742,
+     "log_z": 51.707637786865234
+    },
+    {
+     "iteration": 2883,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.869206428527832,
+     "batch_hit_rate": 0.455078125,
+     "mean_gap": 0.8796874834224582,
+     "log_z": 52.36357116699219
+    },
+    {
+     "iteration": 2884,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.613552093505859,
+     "batch_hit_rate": 0.466796875,
+     "mean_gap": 0.9414062392897904,
+     "log_z": 51.894287109375
+    },
+    {
+     "iteration": 2885,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.217336654663086,
+     "batch_hit_rate": 0.44921875,
+     "mean_gap": 0.9230468729510903,
+     "log_z": 50.829254150390625
+    },
+    {
+     "iteration": 2886,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.745861053466797,
+     "batch_hit_rate": 0.47265625,
+     "mean_gap": 0.9320312440395355,
+     "log_z": 50.86980056762695
+    },
+    {
+     "iteration": 2887,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.90478515625,
+     "batch_hit_rate": 0.455078125,
+     "mean_gap": 0.9425781378522515,
+     "log_z": 51.919822692871094
+    },
+    {
+     "iteration": 2888,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.101027488708496,
+     "batch_hit_rate": 0.4609375,
+     "mean_gap": 0.913671875372529,
+     "log_z": 51.91544723510742
+    },
+    {
+     "iteration": 2889,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7285640239715576,
+     "batch_hit_rate": 0.451171875,
+     "mean_gap": 0.829101555980742,
+     "log_z": 51.37043762207031
+    },
+    {
+     "iteration": 2890,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.283308506011963,
+     "batch_hit_rate": 0.439453125,
+     "mean_gap": 0.8292968515306711,
+     "log_z": 51.65778732299805
+    },
+    {
+     "iteration": 2891,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.5183510780334473,
+     "batch_hit_rate": 0.498046875,
+     "mean_gap": 0.7761718779802322,
+     "log_z": 52.30741882324219
+    },
+    {
+     "iteration": 2892,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.495861530303955,
+     "batch_hit_rate": 0.46484375,
+     "mean_gap": 0.8503906577825546,
+     "log_z": 52.15005874633789
+    },
+    {
+     "iteration": 2893,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.6889398097991943,
+     "batch_hit_rate": 0.49609375,
+     "mean_gap": 0.6855468638241291,
+     "log_z": 51.2445068359375
+    },
+    {
+     "iteration": 2894,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.018186569213867,
+     "batch_hit_rate": 0.494140625,
+     "mean_gap": 0.8220703206025064,
+     "log_z": 51.15583038330078
+    },
+    {
+     "iteration": 2895,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.597992420196533,
+     "batch_hit_rate": 0.44140625,
+     "mean_gap": 0.9656250212574378,
+     "log_z": 51.759727478027344
+    },
+    {
+     "iteration": 2896,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.480987548828125,
+     "batch_hit_rate": 0.466796875,
+     "mean_gap": 0.8968750024214387,
+     "log_z": 52.01698684692383
+    },
+    {
+     "iteration": 2897,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.050046920776367,
+     "batch_hit_rate": 0.49609375,
+     "mean_gap": 0.8785156249068677,
+     "log_z": 51.53002166748047
+    },
+    {
+     "iteration": 2898,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.381009340286255,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.7906250113155693,
+     "log_z": 51.553062438964844
+    },
+    {
+     "iteration": 2899,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.6165947914123535,
+     "batch_hit_rate": 0.513671875,
+     "mean_gap": 0.8804687401279807,
+     "log_z": 52.08644485473633
+    },
+    {
+     "iteration": 2900,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.063361883163452,
+     "batch_hit_rate": 0.458984375,
+     "mean_gap": 0.7685547061264515,
+     "log_z": 51.898681640625
+    },
+    {
+     "iteration": 2901,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.904533386230469,
+     "batch_hit_rate": 0.427734375,
+     "mean_gap": 0.986523434985429,
+     "log_z": 51.85801696777344
+    },
+    {
+     "iteration": 2902,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.67153263092041,
+     "batch_hit_rate": 0.470703125,
+     "mean_gap": 0.8140624854713678,
+     "log_z": 51.30431365966797
+    },
+    {
+     "iteration": 2903,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.1084160804748535,
+     "batch_hit_rate": 0.462890625,
+     "mean_gap": 0.8749999585561454,
+     "log_z": 51.53630828857422
+    },
+    {
+     "iteration": 2904,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.324550628662109,
+     "batch_hit_rate": 0.439453125,
+     "mean_gap": 0.9154297094792128,
+     "log_z": 52.17599105834961
+    },
+    {
+     "iteration": 2905,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.783302307128906,
+     "batch_hit_rate": 0.466796875,
+     "mean_gap": 0.8878906602039933,
+     "log_z": 52.05548095703125
+    },
+    {
+     "iteration": 2906,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.01994514465332,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.8406249927356839,
+     "log_z": 51.3409538269043
+    },
+    {
+     "iteration": 2907,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.611117124557495,
+     "batch_hit_rate": 0.44921875,
+     "mean_gap": 0.8236328354105353,
+     "log_z": 51.35226058959961
+    },
+    {
+     "iteration": 2908,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.5022687911987305,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.8404296832159162,
+     "log_z": 51.9605827331543
+    },
+    {
+     "iteration": 2909,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.1015589237213135,
+     "batch_hit_rate": 0.466796875,
+     "mean_gap": 0.7972656572237611,
+     "log_z": 52.136837005615234
+    },
+    {
+     "iteration": 2910,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.252218246459961,
+     "batch_hit_rate": 0.4296875,
+     "mean_gap": 1.0634765538852662,
+     "log_z": 51.78582763671875
+    },
+    {
+     "iteration": 2911,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.045751571655273,
+     "batch_hit_rate": 0.431640625,
+     "mean_gap": 0.941406256519258,
+     "log_z": 51.19136428833008
+    },
+    {
+     "iteration": 2912,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.692330360412598,
+     "batch_hit_rate": 0.396484375,
+     "mean_gap": 1.1132812602445483,
+     "log_z": 51.316558837890625
+    },
+    {
+     "iteration": 2913,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.409608840942383,
+     "batch_hit_rate": 0.44140625,
+     "mean_gap": 0.9343750067055225,
+     "log_z": 51.901180267333984
+    },
+    {
+     "iteration": 2914,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.496696949005127,
+     "batch_hit_rate": 0.44140625,
+     "mean_gap": 0.9666016008704901,
+     "log_z": 52.070526123046875
+    },
+    {
+     "iteration": 2915,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.932491779327393,
+     "batch_hit_rate": 0.490234375,
+     "mean_gap": 0.9138672123663127,
+     "log_z": 51.62825393676758
+    },
+    {
+     "iteration": 2916,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.417418956756592,
+     "batch_hit_rate": 0.498046875,
+     "mean_gap": 0.726367165800184,
+     "log_z": 51.11888122558594
+    },
+    {
+     "iteration": 2917,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.5390849113464355,
+     "batch_hit_rate": 0.505859375,
+     "mean_gap": 0.7298828214406967,
+     "log_z": 51.27854919433594
+    },
+    {
+     "iteration": 2918,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.3470184803009033,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.7509765457361937,
+     "log_z": 52.012420654296875
+    },
+    {
+     "iteration": 2919,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.398381233215332,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.8126953165046871,
+     "log_z": 52.102481842041016
+    },
+    {
+     "iteration": 2920,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.14596700668335,
+     "batch_hit_rate": 0.41015625,
+     "mean_gap": 0.976171875372529,
+     "log_z": 51.58995056152344
+    },
+    {
+     "iteration": 2921,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.7432332038879395,
+     "batch_hit_rate": 0.42578125,
+     "mean_gap": 0.8980468977242708,
+     "log_z": 51.35470962524414
+    },
+    {
+     "iteration": 2922,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.443475246429443,
+     "batch_hit_rate": 0.43359375,
+     "mean_gap": 1.001953105442226,
+     "log_z": 51.69282150268555
+    },
+    {
+     "iteration": 2923,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.9939589500427246,
+     "batch_hit_rate": 0.447265625,
+     "mean_gap": 0.8710937406867743,
+     "log_z": 51.961692810058594
+    },
+    {
+     "iteration": 2924,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.33852481842041,
+     "batch_hit_rate": 0.40625,
+     "mean_gap": 1.0306640919297934,
+     "log_z": 51.823463439941406
+    },
+    {
+     "iteration": 2925,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.8371431827545166,
+     "batch_hit_rate": 0.498046875,
+     "mean_gap": 0.8158203074708581,
+     "log_z": 51.35919189453125
+    },
+    {
+     "iteration": 2926,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.97548246383667,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.7878906298428774,
+     "log_z": 51.57421112060547
+    },
+    {
+     "iteration": 2927,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.043760299682617,
+     "batch_hit_rate": 0.517578125,
+     "mean_gap": 0.8587890616618097,
+     "log_z": 52.35920333862305
+    },
+    {
+     "iteration": 2928,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.73262882232666,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.7740234131924808,
+     "log_z": 52.407684326171875
+    },
+    {
+     "iteration": 2929,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.706158399581909,
+     "batch_hit_rate": 0.470703125,
+     "mean_gap": 0.8197265325579792,
+     "log_z": 51.79069519042969
+    },
+    {
+     "iteration": 2930,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.4726314544677734,
+     "batch_hit_rate": 0.470703125,
+     "mean_gap": 0.851171881891787,
+     "log_z": 51.28025436401367
+    },
+    {
+     "iteration": 2931,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.3672637939453125,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.818554678466171,
+     "log_z": 51.478057861328125
+    },
+    {
+     "iteration": 2932,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.9344406127929688,
+     "batch_hit_rate": 0.486328125,
+     "mean_gap": 0.8101562382653356,
+     "log_z": 52.11722946166992
+    },
+    {
+     "iteration": 2933,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.8886494636535645,
+     "batch_hit_rate": 0.458984375,
+     "mean_gap": 0.9580078264698386,
+     "log_z": 52.21142578125
+    },
+    {
+     "iteration": 2934,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7133712768554688,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.8455078294500709,
+     "log_z": 51.729496002197266
+    },
+    {
+     "iteration": 2935,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 2.9547207355499268,
+     "batch_hit_rate": 0.451171875,
+     "mean_gap": 0.7843749960884452,
+     "log_z": 51.528648376464844
+    },
+    {
+     "iteration": 2936,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.1041975021362305,
+     "batch_hit_rate": 0.501953125,
+     "mean_gap": 0.7726562554016709,
+     "log_z": 51.93861770629883
+    },
+    {
+     "iteration": 2937,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.523123741149902,
+     "batch_hit_rate": 0.486328125,
+     "mean_gap": 0.8916015664581209,
+     "log_z": 51.86894607543945
+    },
+    {
+     "iteration": 2938,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.9148292541503906,
+     "batch_hit_rate": 0.53515625,
+     "mean_gap": 0.790234356187284,
+     "log_z": 51.37808609008789
+    },
+    {
+     "iteration": 2939,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.3063063621520996,
+     "batch_hit_rate": 0.537109375,
+     "mean_gap": 0.6740234019234776,
+     "log_z": 51.379573822021484
+    },
+    {
+     "iteration": 2940,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.472874641418457,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.7927734293043613,
+     "log_z": 51.95681381225586
+    },
+    {
+     "iteration": 2941,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.514435291290283,
+     "batch_hit_rate": 0.517578125,
+     "mean_gap": 0.7423827731981874,
+     "log_z": 51.932525634765625
+    },
+    {
+     "iteration": 2942,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.253527641296387,
+     "batch_hit_rate": 0.50390625,
+     "mean_gap": 0.8322265311144292,
+     "log_z": 51.47249221801758
+    },
+    {
+     "iteration": 2943,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.2418365478515625,
+     "batch_hit_rate": 0.4609375,
+     "mean_gap": 0.8417968959547579,
+     "log_z": 51.50141143798828
+    },
+    {
+     "iteration": 2944,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.382783889770508,
+     "batch_hit_rate": 0.48046875,
+     "mean_gap": 0.8962890459224582,
+     "log_z": 51.95831298828125
+    },
+    {
+     "iteration": 2945,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.242387771606445,
+     "batch_hit_rate": 0.44140625,
+     "mean_gap": 1.034179674461484,
+     "log_z": 51.908912658691406
+    },
+    {
+     "iteration": 2946,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.004036903381348,
+     "batch_hit_rate": 0.435546875,
+     "mean_gap": 1.0218750247731805,
+     "log_z": 51.385498046875
+    },
+    {
+     "iteration": 2947,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.238645553588867,
+     "batch_hit_rate": 0.4375,
+     "mean_gap": 0.9085937347263098,
+     "log_z": 51.297237396240234
+    },
+    {
+     "iteration": 2948,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.9357709884643555,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.8291015354916453,
+     "log_z": 51.8052864074707
+    },
+    {
+     "iteration": 2949,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7848658561706543,
+     "batch_hit_rate": 0.5,
+     "mean_gap": 0.7765624942258,
+     "log_z": 51.84733200073242
+    },
+    {
+     "iteration": 2950,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.457048177719116,
+     "batch_hit_rate": 0.525390625,
+     "mean_gap": 0.637304687872529,
+     "log_z": 51.41600799560547
+    },
+    {
+     "iteration": 2951,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.1239919662475586,
+     "batch_hit_rate": 0.509765625,
+     "mean_gap": 0.7220703046768904,
+     "log_z": 51.57355499267578
+    },
+    {
+     "iteration": 2952,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.849555015563965,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.7693359274417162,
+     "log_z": 52.012115478515625
+    },
+    {
+     "iteration": 2953,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.499523639678955,
+     "batch_hit_rate": 0.46484375,
+     "mean_gap": 0.8390625156462193,
+     "log_z": 52.1021728515625
+    },
+    {
+     "iteration": 2954,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.138296127319336,
+     "batch_hit_rate": 0.421875,
+     "mean_gap": 1.0509765916503966,
+     "log_z": 51.618675231933594
+    },
+    {
+     "iteration": 2955,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.159488677978516,
+     "batch_hit_rate": 0.4296875,
+     "mean_gap": 0.9986328156664968,
+     "log_z": 51.20977020263672
+    },
+    {
+     "iteration": 2956,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.731368064880371,
+     "batch_hit_rate": 0.4296875,
+     "mean_gap": 0.9867187421768904,
+     "log_z": 51.41524887084961
+    },
+    {
+     "iteration": 2957,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.748085975646973,
+     "batch_hit_rate": 0.4453125,
+     "mean_gap": 0.9992187451571226,
+     "log_z": 52.108280181884766
+    },
+    {
+     "iteration": 2958,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.1812875270843506,
+     "batch_hit_rate": 0.5,
+     "mean_gap": 0.7730468921363354,
+     "log_z": 52.16407012939453
+    },
+    {
+     "iteration": 2959,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.424491882324219,
+     "batch_hit_rate": 0.4375,
+     "mean_gap": 0.9273437699303031,
+     "log_z": 51.65715789794922
+    },
+    {
+     "iteration": 2960,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.6643261909484863,
+     "batch_hit_rate": 0.44921875,
+     "mean_gap": 0.8095703115686774,
+     "log_z": 51.2388801574707
+    },
+    {
+     "iteration": 2961,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.577020645141602,
+     "batch_hit_rate": 0.505859375,
+     "mean_gap": 0.8898437703028321,
+     "log_z": 51.486183166503906
+    },
+    {
+     "iteration": 2962,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.531023979187012,
+     "batch_hit_rate": 0.505859375,
+     "mean_gap": 0.7273436971008778,
+     "log_z": 51.982093811035156
+    },
+    {
+     "iteration": 2963,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.295483589172363,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.8662109645083547,
+     "log_z": 51.966609954833984
+    },
+    {
+     "iteration": 2964,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.621861457824707,
+     "batch_hit_rate": 0.509765625,
+     "mean_gap": 0.8117187637835741,
+     "log_z": 51.52106475830078
+    },
+    {
+     "iteration": 2965,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.073399543762207,
+     "batch_hit_rate": 0.431640625,
+     "mean_gap": 0.8759765727445483,
+     "log_z": 51.53173828125
+    },
+    {
+     "iteration": 2966,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.259606838226318,
+     "batch_hit_rate": 0.49609375,
+     "mean_gap": 0.8480468587949872,
+     "log_z": 52.02466583251953
+    },
+    {
+     "iteration": 2967,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.157816171646118,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.7736327890306711,
+     "log_z": 51.89646530151367
+    },
+    {
+     "iteration": 2968,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.535032272338867,
+     "batch_hit_rate": 0.453125,
+     "mean_gap": 0.8515625288709998,
+     "log_z": 51.82929611206055
+    },
+    {
+     "iteration": 2969,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.0035719871521,
+     "batch_hit_rate": 0.443359375,
+     "mean_gap": 0.8636718783527613,
+     "log_z": 51.66033935546875
+    },
+    {
+     "iteration": 2970,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.06644344329834,
+     "batch_hit_rate": 0.44140625,
+     "mean_gap": 0.9531249944120646,
+     "log_z": 51.8111686706543
+    },
+    {
+     "iteration": 2971,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.763941764831543,
+     "batch_hit_rate": 0.458984375,
+     "mean_gap": 0.9343749796971679,
+     "log_z": 51.62797164916992
+    },
+    {
+     "iteration": 2972,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.814756870269775,
+     "batch_hit_rate": 0.49609375,
+     "mean_gap": 0.9296875158324838,
+     "log_z": 51.73283386230469
+    },
+    {
+     "iteration": 2973,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.5951218605041504,
+     "batch_hit_rate": 0.486328125,
+     "mean_gap": 0.7513671834021807,
+     "log_z": 51.493160247802734
+    },
+    {
+     "iteration": 2974,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.034756183624268,
+     "batch_hit_rate": 0.5234375,
+     "mean_gap": 0.7804687414318323,
+     "log_z": 51.67540740966797
+    },
+    {
+     "iteration": 2975,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.586823463439941,
+     "batch_hit_rate": 0.5546875,
+     "mean_gap": 0.7835937235504389,
+     "log_z": 51.54765319824219
+    },
+    {
+     "iteration": 2976,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 2.9156978130340576,
+     "batch_hit_rate": 0.46875,
+     "mean_gap": 0.7335937144234776,
+     "log_z": 51.52555465698242
+    },
+    {
+     "iteration": 2977,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.136619567871094,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.8591796662658453,
+     "log_z": 52.08154296875
+    },
+    {
+     "iteration": 2978,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.615357398986816,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.886523456312716,
+     "log_z": 51.96058654785156
+    },
+    {
+     "iteration": 2979,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.979799747467041,
+     "batch_hit_rate": 0.462890625,
+     "mean_gap": 0.9181640986353159,
+     "log_z": 51.378047943115234
+    },
+    {
+     "iteration": 2980,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.261477947235107,
+     "batch_hit_rate": 0.45703125,
+     "mean_gap": 0.932031212374568,
+     "log_z": 51.215824127197266
+    },
+    {
+     "iteration": 2981,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.468029022216797,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.9361328082159162,
+     "log_z": 51.65972900390625
+    },
+    {
+     "iteration": 2982,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.090680122375488,
+     "batch_hit_rate": 0.453125,
+     "mean_gap": 0.9599609188735485,
+     "log_z": 52.105621337890625
+    },
+    {
+     "iteration": 2983,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.678105354309082,
+     "batch_hit_rate": 0.482421875,
+     "mean_gap": 0.9095703335478902,
+     "log_z": 51.91347122192383
+    },
+    {
+     "iteration": 2984,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.336075782775879,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.7640625303611159,
+     "log_z": 51.260169982910156
+    },
+    {
+     "iteration": 2985,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7326629161834717,
+     "batch_hit_rate": 0.4921875,
+     "mean_gap": 0.8212890587747097,
+     "log_z": 51.28641891479492
+    },
+    {
+     "iteration": 2986,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.032040596008301,
+     "batch_hit_rate": 0.474609375,
+     "mean_gap": 0.8437500013969839,
+     "log_z": 51.871337890625
+    },
+    {
+     "iteration": 2987,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.303153991699219,
+     "batch_hit_rate": 0.5,
+     "mean_gap": 0.8330078194849193,
+     "log_z": 51.97042465209961
+    },
+    {
+     "iteration": 2988,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.790262222290039,
+     "batch_hit_rate": 0.466796875,
+     "mean_gap": 0.8800781513564289,
+     "log_z": 51.80474853515625
+    },
+    {
+     "iteration": 2989,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.886905670166016,
+     "batch_hit_rate": 0.4453125,
+     "mean_gap": 0.8968750131316483,
+     "log_z": 51.54963684082031
+    },
+    {
+     "iteration": 2990,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.0226969718933105,
+     "batch_hit_rate": 0.43359375,
+     "mean_gap": 1.0238281274214387,
+     "log_z": 51.5821533203125
+    },
+    {
+     "iteration": 2991,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.454325199127197,
+     "batch_hit_rate": 0.48828125,
+     "mean_gap": 0.8732422138564289,
+     "log_z": 51.60753631591797
+    },
+    {
+     "iteration": 2992,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 5.429283142089844,
+     "batch_hit_rate": 0.51171875,
+     "mean_gap": 0.7906249957159162,
+     "log_z": 52.12733840942383
+    },
+    {
+     "iteration": 2993,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.556946754455566,
+     "batch_hit_rate": 0.455078125,
+     "mean_gap": 1.0126953134313226,
+     "log_z": 52.079010009765625
+    },
+    {
+     "iteration": 2994,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.826305389404297,
+     "batch_hit_rate": 0.484375,
+     "mean_gap": 0.838281231932342,
+     "log_z": 51.395755767822266
+    },
+    {
+     "iteration": 2995,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.623385906219482,
+     "batch_hit_rate": 0.474609375,
+     "mean_gap": 0.8878906276077032,
+     "log_z": 51.31636428833008
+    },
+    {
+     "iteration": 2996,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 6.468528747558594,
+     "batch_hit_rate": 0.443359375,
+     "mean_gap": 0.9951171539723873,
+     "log_z": 51.77825927734375
+    },
+    {
+     "iteration": 2997,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.214690208435059,
+     "batch_hit_rate": 0.443359375,
+     "mean_gap": 0.9531250223517418,
+     "log_z": 51.72183609008789
+    },
+    {
+     "iteration": 2998,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 4.776276111602783,
+     "batch_hit_rate": 0.47265625,
+     "mean_gap": 0.8960937475785613,
+     "log_z": 51.70167922973633
+    },
+    {
+     "iteration": 2999,
+     "structure": "((((((....))))))..((((((....))))))..((((((....))))))",
+     "loss": 3.7076542377471924,
+     "batch_hit_rate": 0.478515625,
+     "mean_gap": 0.8472656356170774,
+     "log_z": 51.63114929199219
+    }
+   ]
+  }
+ ]
+}

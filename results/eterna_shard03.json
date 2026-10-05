@@ -1,11 +1,11 @@
 {
  "experiment": "eterna",
  "meta": {
-  "timestamp": "2026-10-04T17:41:20",
-  "host": "r237.ib.bridges2.psc.edu",
+  "timestamp": "2026-10-04T20:38:38",
+  "host": "r138.ib.bridges2.psc.edu",
   "user": "szhang37",
   "python": "3.11.16",
-  "slurm_job": "47416597",
+  "slurm_job": "47421694",
   "slurm_task": "3",
   "cpus": "32",
   "args": {
@@ -19,50 +19,59 @@
    "no_taneda": false,
    "eval_samples": 2000,
    "seconds": 120.0,
-   "max_puzzle_length": 100,
+   "max_puzzle_length": 400,
    "shard": 3,
-   "n_shards": 10
+   "n_shards": 20
   },
-  "git": "ac06f07",
+  "git": "b1665e9",
   "viennarna": "2.7.2"
  },
  "seconds": 120.0,
  "rows": [
   {
-   "puzzle": 10,
-   "name": "Frog Foot",
-   "length": 45,
+   "puzzle": 4,
+   "name": "Human Integrated Adenovirus - Difficulty Level 0",
+   "length": 192,
    "known_solvable_umfe": true,
    "known_solvable_mfe": true,
-   "n_distinct": 31335,
-   "solved_here": true
-  },
-  {
-   "puzzle": 27,
-   "name": "U",
-   "length": 57,
-   "known_solvable_umfe": true,
-   "known_solvable_mfe": true,
-   "n_distinct": 2812,
-   "solved_here": true
-  },
-  {
-   "puzzle": 47,
-   "name": "Misfolded Aptamer",
-   "length": 50,
-   "known_solvable_umfe": true,
-   "known_solvable_mfe": true,
-   "n_distinct": 2442,
-   "solved_here": true
-  },
-  {
-   "puzzle": 71,
-   "name": "Variation of a crop circle",
-   "length": 88,
-   "known_solvable_umfe": false,
-   "known_solvable_mfe": false,
    "n_distinct": 0,
    "solved_here": false
+  },
+  {
+   "puzzle": 24,
+   "name": "Shape Test",
+   "length": 104,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 12,
+   "solved_here": true
+  },
+  {
+   "puzzle": 44,
+   "name": "[CloudBeta] An Arm and a Leg 1.0",
+   "length": 63,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 2034,
+   "solved_here": true
+  },
+  {
+   "puzzle": 64,
+   "name": "Crop circle 2",
+   "length": 110,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 84,
+   "name": "Kyurem 5",
+   "length": 104,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 24,
+   "solved_here": true
   }
  ]
 }

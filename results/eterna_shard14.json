@@ -1,0 +1,77 @@
+{
+ "experiment": "eterna",
+ "meta": {
+  "timestamp": "2026-10-04T20:40:19",
+  "host": "r147.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47421751",
+  "slurm_task": "14",
+  "cpus": "32",
+  "args": {
+   "command": "eterna",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "seconds": 120.0,
+   "max_puzzle_length": 400,
+   "shard": 14,
+   "n_shards": 20
+  },
+  "git": "b1665e9",
+  "viennarna": "2.7.2"
+ },
+ "seconds": 120.0,
+ "rows": [
+  {
+   "puzzle": 15,
+   "name": "Small and Easy 6",
+   "length": 30,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 6536,
+   "solved_here": true
+  },
+  {
+   "puzzle": 35,
+   "name": "Iron Cross",
+   "length": 123,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 55,
+   "name": "Kyurem 7",
+   "length": 102,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 28,
+   "solved_here": true
+  },
+  {
+   "puzzle": 75,
+   "name": "Misfolded Aptamer 6",
+   "length": 75,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 87,
+   "solved_here": true
+  },
+  {
+   "puzzle": 95,
+   "name": "Multilooping 6",
+   "length": 82,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 214,
+   "solved_here": true
+  }
+ ]
+}

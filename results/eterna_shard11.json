@@ -1,0 +1,77 @@
+{
+ "experiment": "eterna",
+ "meta": {
+  "timestamp": "2026-10-04T20:39:57",
+  "host": "r250.ib.bridges2.psc.edu",
+  "user": "szhang37",
+  "python": "3.11.16",
+  "slurm_job": "47421743",
+  "slurm_task": "11",
+  "cpus": "32",
+  "args": {
+   "command": "eterna",
+   "seed": 0,
+   "out": "results",
+   "figures": "figures",
+   "tag": "",
+   "workers": null,
+   "max_length": 90,
+   "no_taneda": false,
+   "eval_samples": 2000,
+   "seconds": 120.0,
+   "max_puzzle_length": 400,
+   "shard": 11,
+   "n_shards": 20
+  },
+  "git": "b1665e9",
+  "viennarna": "2.7.2"
+ },
+ "seconds": 120.0,
+ "rows": [
+  {
+   "puzzle": 12,
+   "name": "Mat - Martian 2",
+   "length": 213,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 32,
+   "name": "InfoRNA bulge test",
+   "length": 122,
+   "known_solvable_umfe": true,
+   "known_solvable_mfe": true,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 52,
+   "name": "[RNA] Repetitious Sequences 8/10",
+   "length": 80,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
+  },
+  {
+   "puzzle": 72,
+   "name": "Loop next to a Multiloop",
+   "length": 73,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": true,
+   "n_distinct": 10,
+   "solved_here": true
+  },
+  {
+   "puzzle": 92,
+   "name": "Mutated chicken feet",
+   "length": 100,
+   "known_solvable_umfe": false,
+   "known_solvable_mfe": false,
+   "n_distinct": 0,
+   "solved_here": false
+  }
+ ]
+}
