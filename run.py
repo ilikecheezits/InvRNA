@@ -771,7 +771,17 @@ def cmd_figures(args) -> None:
                             color=[METHOD_COLOURS.get(m, MUTED)
                                    for m in frame["method"]])
         axes[1].set_yticks(range(len(frame)))
-        axes[1].set_yticklabels(frame["method"], fontsize=7.5)
+        # A method whose own call cannot be interrupted mid-flight can run well
+        # past the budget (RNAinverse has gone to 4799s against 600s). Its rate
+        # is still honest, but a bar labelled "in 600s" would not be, so say on
+        # the tick how long it actually took.
+        budget = payload["seconds"]
+        labels = []
+        for result in frame.itertuples():
+            over = result.elapsed / budget
+            labels.append(f"{result.method}  [ran {result.elapsed:.0f}s]"
+                          if over > 1.1 else result.method)
+        axes[1].set_yticklabels(labels, fontsize=7.5)
         axes[1].set_xlabel(f"distinct solutions in {payload['seconds']:.0f}s")
         axes[1].set_title("Final count", loc="left", fontsize=10)
         axes[1].grid(axis="y", visible=False)
