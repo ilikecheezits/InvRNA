@@ -18,7 +18,7 @@
 # In an array job --task-id is appended automatically (size it from
 # `python run.py sweep --list`). Submit from a shell with the env active.
 #
-# cpus-per-task is 8 rather than 32 because the GPU does the work here, but the
+# cpus-per-task is 5 rather than 32 because GPU-shared caps it at 5 per GPU, and the GPU does the work here, but the
 # folding pool still uses every core it is given -- raise it if the reward
 # turns out to be the bottleneck for your target lengths.
 

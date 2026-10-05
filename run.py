@@ -116,6 +116,26 @@ def rank_hardest(out_dir: str, n: int) -> list[str] | None:
     return [r["target"] for r in rows[:n]]
 
 
+def hamming_spread(solutions: np.ndarray, cap: int = 200) -> float:
+    """Mean pairwise Hamming distance over the solutions found.
+
+    Diversity is the whole point of a sampler, so a distinct count alone is
+    not enough: 200 solutions one mutation apart from each other are not the
+    same result as 200 spread across the space. Capped because this is
+    quadratic and the estimate stops moving well before 200.
+    """
+    sample = np.atleast_2d(np.asarray(solutions))[:cap]
+
+    if len(sample) < 2:
+        return float("nan")
+
+    differs = sample[:, None, :] != sample[None, :, :]
+    distances = differs.sum(axis=2)
+    upper = np.triu_indices(len(sample), k=1)
+
+    return float(distances[upper].mean())
+
+
 # --------------------------------------------------------------------------
 # Experiments
 # --------------------------------------------------------------------------
@@ -319,8 +339,21 @@ def sweep_tasks(args) -> list[tuple[dict, int]]:
     if not rows:
         raise SystemExit("run `python run.py hitrate` first")
     rows.sort(key=lambda r: r.get("best_baseline", 1.0))
-    positions = np.linspace(0, len(rows) - 1, min(args.n_targets, len(rows)))
-    chosen = [rows[int(round(p))] for p in positions]
+
+    # An explicit list is for ablations: pairing a second policy against the
+    # exact targets the main sweep already ran, rather than re-deriving a
+    # selection that might drift if the hit-rate table ever changes.
+    if getattr(args, "targets", None):
+        by_name = {r["target"]: r for r in rows}
+        missing = [n for n in args.targets if n not in by_name]
+        if missing:
+            raise SystemExit(f"not in the hit-rate table: {missing}")
+        chosen = [by_name[n] for n in args.targets]
+    else:
+        positions = np.linspace(0, len(rows) - 1,
+                                min(args.n_targets, len(rows)))
+        chosen = [rows[int(round(p))] for p in positions]
+
     return list(itertools.product(chosen, args.seeds))
 
 
@@ -354,27 +387,42 @@ def cmd_sweep(args) -> None:
         trainer.oracles[structure] = oracle
 
         started = time.time()
-        trainer.fit(structure)
+        history = trainer.fit(structure)
         elapsed = time.time() - started
 
         draws = trainer.sample(structure, args.eval_samples)
         hit = oracle.hits(draws)
-        distinct = int(len(np.unique(draws[hit], axis=0))) if hit.any() else 0
 
+        solutions = np.unique(draws[hit], axis=0) if hit.any() else draws[:0]
+        distinct = int(len(solutions))
+
+        # Everything a later figure might want is kept HERE, because a 15-minute
+        # training run is not something to repeat for a column that was cheap to
+        # record: the learning curve, a diversity number, and the sequences
+        # themselves so any future metric is computable without the GPU.
         records.append({"target": row["target"], "structure": structure,
                         "length": row["length"], "seed": seed,
                         "gflownet_hit": float(hit.mean()),
                         "gflownet_distinct": distinct,
+                        "mean_hamming": hamming_spread(solutions),
+                        "solutions": R.arrays_to_sequences(solutions[:200]),
                         "best_baseline": row.get("best_baseline"),
                         "uniform_hit": row.get("uniform_hit"),
                         "boltzmann_hit": row.get("boltzmann_hit"),
-                        "train_seconds": elapsed})
+                        "attention_window": cfg.attention_window,
+                        "train_seconds": elapsed,
+                        "history": history[-400:]})
         print(f"{row['target']:<22} seed {seed}  hit {hit.mean() * 100:6.2f}%  "
               f"distinct {distinct:>5}  [{elapsed:.0f}s]")
 
     R.FoldingOracle.shutdown_pools()
-    tag = args.tag or (f"task{args.task_id:03d}" if args.task_id is not None
-                       else "all")
+    # A tag names the RUN (an ablation, say), the task id names the shard, and
+    # an array job needs BOTH -- with the tag alone all its tasks write the
+    # same filename and only the last one to finish survives.
+    parts = [args.tag] if args.tag else []
+    if args.task_id is not None:
+        parts.append(f"task{args.task_id:03d}")
+    tag = "_".join(parts) or "all"
     save({"experiment": "sweep", "meta": metadata(args), "records": records},
          args, "sweep", tag)
 
@@ -827,6 +875,125 @@ def cmd_summary(args) -> None:
                 ["puzzle", "name", "n_distinct"]].to_string(index=False))
 
 
+def cmd_export(args) -> None:
+    """Flatten results/*.json into tidy CSVs for plotting.
+
+    The JSONs are nested because that is how the experiments produce them;
+    plotting wants one row per observation. This is the bridge, and it is
+    deliberately dumb -- no analysis happens here, so a figure built from a
+    CSV and a figure built from the JSON can never disagree.
+    """
+    import pandas as pd
+
+    os.makedirs(args.csv, exist_ok=True)
+    written = []
+
+    def dump(name: str, rows: list[dict]) -> None:
+        if not rows:
+            print(f"skip {name}: nothing in {args.out}")
+            return
+        path = os.path.join(args.csv, f"{name}.csv")
+        frame = pd.DataFrame(rows)
+        frame.to_csv(path, index=False)
+        written.append((name, frame.shape))
+        print(f"wrote {path}  {frame.shape[0]} rows x {frame.shape[1]} cols")
+
+    # --- hit-rate collapse ------------------------------------------------
+    dump("hitrate", hit_rate_rows(args.out))
+
+    # --- designability ----------------------------------------------------
+    designability, examples = [], []
+
+    for payload in load(args.out, "designability"):
+        for row in payload.get("rows", []):
+            designability.append({k: v for k, v in row.items()
+                                  if k != "examples"})
+            for rank, sequence in enumerate(row.get("examples", [])):
+                examples.append({"target": row["target"], "rank": rank,
+                                 "sequence": sequence})
+
+    dump("designability", designability)
+    dump("designability_examples", examples)
+
+    # --- compute-matched budget ------------------------------------------
+    budget, timeline = [], []
+
+    for payload in load(args.out, "budget"):
+        target = payload.get("target")
+        break_even = payload.get("break_even") or {}
+
+        for result in payload.get("results", []):
+            budget.append({
+                "target": target,
+                "budget_seconds": payload.get("seconds"),
+                "train_seconds": payload.get("train_seconds"),
+                "break_even_reachable": break_even.get("reachable"),
+                "break_even_solutions": break_even.get("solutions"),
+                **{k: v for k, v in result.items() if k != "timeline"}})
+
+            for point in result.get("timeline", []):
+                elapsed, found = (point if isinstance(point, (list, tuple))
+                                  else (point.get("elapsed"),
+                                        point.get("solutions")))
+                timeline.append({"target": target,
+                                 "method": result.get("method"),
+                                 "elapsed": elapsed, "solutions": found})
+
+    dump("budget", budget)
+    dump("budget_timeline", timeline)
+
+    # --- crossover sweep --------------------------------------------------
+    sweep, curves = [], []
+
+    for payload in load(args.out, "sweep"):
+        window = (payload.get("meta", {}).get("args", {})
+                  .get("attention_window"))
+
+        for record in payload.get("records", []):
+            policy = record.get("attention_window", window)
+
+            sweep.append({
+                **{k: v for k, v in record.items()
+                   if k not in ("history", "solutions", "structure")},
+                "attention_window": policy,
+                "policy": "markov" if policy == 1 else "full-history",
+                "n_solutions_kept": len(record.get("solutions", []))})
+
+            for step, point in enumerate(record.get("history", [])):
+                curves.append({"target": record["target"],
+                               "seed": record.get("seed"),
+                               "attention_window": policy,
+                               "step": step, **point})
+
+    dump("sweep", sweep)
+    dump("sweep_history", curves)
+
+    # --- amortisation -----------------------------------------------------
+    amortized = []
+
+    for payload in load(args.out, "amortized"):
+        for row in payload.get("rows", []):
+            amortized.append({
+                "family": payload.get("family"),
+                "train_seconds": payload.get("train_seconds"),
+                "batch_size": (payload.get("meta", {}).get("args", {})
+                               .get("batch_size")),
+                **row})
+
+    dump("amortized", amortized)
+
+    # --- Eterna100 --------------------------------------------------------
+    eterna = []
+
+    for payload in load(args.out, "eterna"):
+        for row in payload.get("rows", []):
+            eterna.append({"budget_seconds": payload.get("seconds"), **row})
+
+    dump("eterna", eterna)
+
+    print(f"\n{len(written)} tables -> {args.csv}/")
+
+
 # --------------------------------------------------------------------------
 # CLI
 # --------------------------------------------------------------------------
@@ -877,6 +1044,9 @@ def main() -> None:
     sub.add_argument("--n-targets", type=int, default=6)
     sub.add_argument("--seeds", type=int, nargs="*", default=[0, 1, 2])
     sub.add_argument("--sweep-max-length", type=int, default=60)
+    sub.add_argument("--targets", nargs="*", default=None,
+                     help="run these exact targets instead of a spread; "
+                          "for ablations against an earlier sweep")
     sub.add_argument("--task-id", type=int, default=None)
     sub.add_argument("--list", action="store_true")
     R.add_gflownet_args(sub)
@@ -895,6 +1065,10 @@ def main() -> None:
 
     add("figures", cmd_figures, "rebuild all figures from results/")
     add("summary", cmd_summary, "print headline numbers")
+
+    sub = add("export", cmd_export, "flatten results/*.json into tidy CSVs")
+    sub.add_argument("--csv", default="csv",
+                     help="output directory for the CSV tables")
 
     args = parser.parse_args()
     args.func(args)
