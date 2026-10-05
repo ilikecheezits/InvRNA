@@ -105,6 +105,34 @@ def hit_rate_rows(out_dir: str) -> list[dict]:
     return rows
 
 
+def sweep_records(out_dir: str, policy: str = "full-history") -> list[dict]:
+    """Sweep records for ONE policy, tagged with which policy they came from.
+
+    The Markov ablation writes sweep_markov_task*.json, which `load` picks up
+    under the same "sweep" prefix. Pooling the two averages a window-1 run
+    into the full-history number for every target they share, so every reader
+    of the sweep goes through here -- the alternative is a filter that is
+    remembered in one place and forgotten in another.
+
+    `policy` is "full-history", "markov", or "all".
+    """
+    records = []
+
+    for payload in load(out_dir, "sweep"):
+        fallback = (payload.get("meta", {}).get("args", {})
+                    .get("attention_window"))
+
+        for record in payload.get("records", []):
+            window = record.get("attention_window", fallback)
+            label = "markov" if window == 1 else "full-history"
+
+            if policy in (label, "all"):
+                records.append({**record, "attention_window": window,
+                                "policy": label})
+
+    return records
+
+
 def rank_hardest(out_dir: str, n: int) -> list[str] | None:
     """Rank by the BEST baseline, not uniform alone: many targets tie at
     exactly zero on uniform, and an arbitrary tiebreak can land on one where
@@ -754,7 +782,7 @@ def cmd_figures(args) -> None:
         write(fig, f"fig2_budget_{payload['target']}")
 
     # --- fig3: the crossover ------------------------------------------------
-    records = [r for p in load(args.out, "sweep") for r in p.get("records", [])]
+    records = sweep_records(args.out)
     if records:
         frame = pd.DataFrame(records)
         summary = (frame.groupby("target")
@@ -845,13 +873,24 @@ def cmd_summary(args) -> None:
                   if not analysis["reachable"]
                   else f"~{analysis['solutions']:.0f} solutions")
 
-    records = [r for p in load(args.out, "sweep") for r in p.get("records", [])]
+    records = sweep_records(args.out)
     if records:
         section("sweep")
         print(pd.DataFrame(records).groupby("target").agg(
             seeds=("seed", "nunique"), baseline=("best_baseline", "first"),
             gflownet=("gflownet_hit", "mean"), sd=("gflownet_hit", "std"),
         ).sort_values("baseline").to_string())
+
+    ablation = pd.DataFrame(sweep_records(args.out, "all"))
+    if not ablation.empty and (ablation["policy"] == "markov").any():
+        paired = (ablation.pivot_table(index="target", columns="policy",
+                                       values="gflownet_hit", aggfunc="mean")
+                  .dropna())
+
+        if not paired.empty and "markov" in paired:
+            paired["ratio"] = paired["full-history"] / paired["markov"]
+            section("Markov ablation (attention window 1, shared targets)")
+            print(paired.sort_values("ratio", ascending=False).to_string())
 
     for payload in load(args.out, "amortized"):
         section(f"amortisation (family '{payload['family']}')")
@@ -945,25 +984,18 @@ def cmd_export(args) -> None:
     # --- crossover sweep --------------------------------------------------
     sweep, curves = [], []
 
-    for payload in load(args.out, "sweep"):
-        window = (payload.get("meta", {}).get("args", {})
-                  .get("attention_window"))
+    for record in sweep_records(args.out, "all"):
+        sweep.append({
+            **{k: v for k, v in record.items()
+               if k not in ("history", "solutions", "structure")},
+            "n_solutions_kept": len(record.get("solutions", []))})
 
-        for record in payload.get("records", []):
-            policy = record.get("attention_window", window)
-
-            sweep.append({
-                **{k: v for k, v in record.items()
-                   if k not in ("history", "solutions", "structure")},
-                "attention_window": policy,
-                "policy": "markov" if policy == 1 else "full-history",
-                "n_solutions_kept": len(record.get("solutions", []))})
-
-            for step, point in enumerate(record.get("history", [])):
-                curves.append({"target": record["target"],
-                               "seed": record.get("seed"),
-                               "attention_window": policy,
-                               "step": step, **point})
+        for step, point in enumerate(record.get("history", [])):
+            curves.append({"target": record["target"],
+                           "seed": record.get("seed"),
+                           "attention_window": record["attention_window"],
+                           "policy": record["policy"],
+                           "step": step, **point})
 
     dump("sweep", sweep)
     dump("sweep_history", curves)
